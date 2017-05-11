@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.trukker.trukkershipperuae" >
+
+    <permission
+        android:name="com.trukker.trukkershipperuae.permission.MAPS_RECEIVE" android:protectionLevel="signature" />
+     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="com.trukker.trukkershipperuae.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+
+        android:label="@string/app_name"
+        android:theme="@style/Theme.MyAppTheme" >
+        <activity
+            android:name="com.trukker.trukkershipperuae.activity.FlashScreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.trukker.trukkershipperuae.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:largeHeap="true"
+            android:theme="@style/MyMaterialTheme" />
+
+
+        <activity
+            android:name="com.trukker.trukkershipperuae.activity.Activity_Registartion"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|keyboardHidden"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name="com.trukker.trukkershipperuae.activity.Activity_MoveMyHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name="com.trukker.trukkershipperuae.activity.Activity_OTPRegistration"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+
+        <activity
+            android:name="com.trukker.trukkershipperuae.activity.Activity_Forgotpass"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name=".activity.Activity_GetQuote_premium"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activity.Activity_payment"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name=".activity.Activity_payment_online"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name=".activity.Activity_Feedback"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name=".activity.Activity_payment_cash"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activity.Activity_MoveMyHome_Detail"
+            android:screenOrientation="portrait"
+            android:largeHeap="true"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name=".activity.Activity_paintingselection"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name=".activity.MovingGoodsMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name=".activity.Activity_Goods_Compelted"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name=".activity.Activity_MoveMyGoods"
+            android:largeHeap="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name=".activity.Activity_GoodsQuote"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activity.Activity_Goods_detail"
+            android:largeHeap="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name=".activity.Activity_GetQuote_standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name=".activity.Activity_Goods_payment"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name=".activity.Activity_GetQuote"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activity.Activity_MoveMyGoods_details"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name=".activity.Activity_MOveMyHome_Cancel"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name=".activity.Activity_HireTruck"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name=".activity.Activity_HireQuote"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name=".activity.Activity_HirePayment"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name=".activity.Activity_Hire_completed"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name=".activity.Activity_MoveMyHome_Addons"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name=".activity.Dialog_postlodedetail"/>
+
+        <activity
+            android:name=".activity.PlaceAutocompleteActivity" />
+
+
+        <activity android:name=".activity.BookLaterActivity" />
+        <activity android:name=".activity.BookNowActivity" />
+        <activity android:name=".activity.FareEstimateActivity" />
+        <activity android:name=".activity.PostLoadCongratesActivity" />
+        <activity android:name=".activity.OngoingGoodsOrderTrack" />
+        <activity android:name=".activity.CancelPostOrderActivity" />
+
+        <activity android:name="com.payfort.fort.android.sdk.activities.InitSecureConnectionActivity"/>
+        <activity android:name="com.payfort.fort.android.sdk.activities.CreditCardPaymentActivity" android:windowSoftInputMode="adjustPan" android:configChanges="locale" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name="com.payfort.fort.android.sdk.activities.CreditCardResponseActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar" android:configChanges="locale" android:screenOrientation="portrait"/>
+
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
+
+        <meta-data
+             android:name="com.google.android.geo.API_KEY"
+             android:value="AIzaSyCpmnfWrz-MeAy8bVGzGIcQA6vNJY4MJc4" />
+
+         <service android:name=".FirebaseService.MyFirebaseMessagingService">
+             <intent-filter>
+                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
+             </intent-filter>
+         </service>
+       <service
+             android:name=".FirebaseService.MyFirebaseInstanceIDService">
+             <intent-filter>
+                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+             </intent-filter>
+         </service>
+        <meta-data
+             android:name="io.fabric.ApiKey"
+             android:value="aa0fd97f23d2c5001c520545bd211f8f628b7f0b" />
+     </application>
+
+ </manifest>

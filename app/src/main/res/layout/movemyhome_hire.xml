@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/Appcolor"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Hire Truck"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+
+        <ImageView
+
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_icon" />
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/next_btn"
+            android:gravity="center"
+            android:text="Back"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/form_open"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/mymoveform"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+
+            android:orientation="vertical"
+
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Back to Details"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/form_inside"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:id="@+id/hometype_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:paddingBottom="10dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/hometype_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/movehome_home" />
+
+
+                <TextView
+                    android:id="@+id/hometype_edittext_hh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/noof_packing_title"
+                    android:layout_toRightOf="@+id/noof_packing_title"
+                    android:background="@null"
+                    android:hint="Select Truck Type"
+                    android:inputType="text"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="1dp"
+                    android:singleLine="true"
+                    android:textColor="#7D7D7D"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/noof_packing_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/hometype_edittext_hh"
+                    android:layout_toEndOf="@+id/hometype_icon"
+                    android:layout_toRightOf="@+id/hometype_icon"
+                    android:paddingLeft="5dp"
+                    android:text="Truck Type"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/icon_hometype"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="right"
+                    android:background="@drawable/rightarrow" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/rowline"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@android:color/darker_gray" />
+
+
+
+            <RelativeLayout
+                android:id="@+id/date_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:paddingBottom="10dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/date_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/movehome_date" />
+
+
+                <TextView
+                    android:id="@+id/date_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/date_text"
+                    android:layout_toRightOf="@+id/date_text"
+                    android:background="@null"
+                    android:hint="Enter Date"
+                    android:inputType="text"
+                    android:paddingLeft="30dp"
+                    android:singleLine="true"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/date_edittext"
+                    android:layout_toEndOf="@+id/date_icon"
+                    android:layout_toRightOf="@+id/date_icon"
+                    android:paddingLeft="5dp"
+                    android:text="Start Date"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/rightarrow" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@android:color/darker_gray" />
+            <RelativeLayout
+                android:id="@+id/date2_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:paddingBottom="10dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/date2_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/movehome_date" />
+
+
+                <TextView
+                    android:id="@+id/date2_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/date2_text"
+                    android:layout_toRightOf="@+id/date2_text"
+                    android:background="@null"
+                    android:hint="Enter Date"
+                    android:inputType="text"
+                    android:paddingLeft="35dp"
+                    android:singleLine="true"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/date2_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/date2_edittext"
+                    android:layout_toEndOf="@+id/date2_icon"
+                    android:layout_toRightOf="@+id/date2_icon"
+                    android:paddingLeft="5dp"
+                    android:text="End Date"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView22"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/rightarrow" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@android:color/darker_gray" />
+            <RelativeLayout
+                android:id="@+id/time_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:paddingBottom="10dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/time_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/movehome_time" />
+
+
+                <TextView
+                    android:id="@+id/time_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/time_text"
+                    android:layout_toRightOf="@+id/time_text"
+                    android:background="@null"
+                    android:hint="Select Time"
+                    android:inputType="text"
+                    android:paddingLeft="60dp"
+                    android:singleLine="true"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/time_edittext"
+                    android:layout_toEndOf="@+id/time_icon"
+                    android:layout_toRightOf="@+id/time_icon"
+                    android:paddingLeft="5dp"
+                    android:text="Time"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignBottom="@+id/time_edittext"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/rightarrow" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@android:color/darker_gray" />
+            <RelativeLayout
+                android:id="@+id/noofdays_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:paddingBottom="10dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/noofdays_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/movehome_to" />
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/noofdays_edittext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/noofdays_icon"
+                    android:layout_marginRight="5dp"
+                    android:layout_toEndOf="@+id/noofdays_text"
+                    android:layout_toRightOf="@+id/noofdays_text"
+                    android:background="@null"
+                    android:hint="Enter No Of Days"
+                    android:inputType="number"
+                    android:paddingLeft="22dp"
+                    android:singleLine="true"
+                    android:textColor="#7D7D7D"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/noofdays_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/noofdays_edittext"
+                    android:layout_toEndOf="@+id/noofdays_icon"
+                    android:layout_toRightOf="@+id/noofdays_icon"
+                    android:paddingLeft="5dp"
+                    android:text="No of Days"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@android:color/darker_gray" />
+            <RelativeLayout
+                android:id="@+id/movefrom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:paddingBottom="10dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/movefrom_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/movehome_from" />
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/movefrom_edittext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/movefrom_icon"
+                    android:layout_marginRight="5dp"
+                    android:layout_toEndOf="@+id/movefrom_text"
+                    android:layout_toRightOf="@+id/movefrom_text"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:hint="Enter Start Point"
+                    android:inputType="text"
+                    android:paddingLeft="22dp"
+                    android:singleLine="true"
+                    android:textColor="#7D7D7D"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/movefrom_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/movefrom_edittext"
+                    android:layout_toEndOf="@+id/movefrom_icon"
+                    android:layout_toRightOf="@+id/movefrom_icon"
+                    android:paddingLeft="5dp"
+                    android:text="Start Point"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@android:color/darker_gray" />
+
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/funcinalty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+
+        <TextView
+            android:id="@+id/form_close"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="0.50"
+            android:background="@color/white"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="Show on Map"
+            android:textColor="@color/Appcolor" />
+
+
+        <TextView
+            android:id="@+id/getquote"
+            style="@style/submitbuttonstyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="0.50"
+            android:background="@drawable/round_mainbutton"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="Get Quote" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/shade_view"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/toolbar_dropshadow" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
+
+
+
+      
+      
+   

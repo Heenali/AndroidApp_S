@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">TruKKer</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="nav_item_Dashboard">Dashboard</string>
+    <string name="nav_item_Orders">My Orders</string>
+    <string name="nav_item_Orders_draft">My Draft Orders</string>
+    <string name="nav_item_Payment">Payment Details</string>
+    <string name="nav_item_ChangePassword">Change Password</string>
+    <string name="nav_item_Notification">Notification</string>
+    <string name="nav_item_ContactUs">Contact Us</string>
+    <string name="nav_item_LoginLogout">Login</string>
+    <string name="nav_item_logout">Logout</string>
+
+    <string-array name = "spinner_unit">
+        <item>KG</item>
+        <item>TONS</item>
+    </string-array>
+    <string-array name = "spinner_year">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <!-- navigation drawer item labels  -->
+    <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_Dashboard</item>
+        <item>@string/nav_item_Orders</item>
+        <item>@string/nav_item_Orders_draft</item>
+        <item>@string/nav_item_ChangePassword</item>
+        <item>@string/nav_item_Notification</item>
+        <item>@string/nav_item_ContactUs</item>
+        <item>@string/nav_item_logout</item>
+
+    </string-array>
+
+
+    <string-array name="nav_drawer_labels_withoutlogin">
+        <item>@string/nav_item_Dashboard</item>
+        <item>@string/nav_item_Orders</item>
+
+        <item>@string/nav_item_Notification</item>
+        <item>@string/nav_item_ContactUs</item>
+        <item>@string/nav_item_LoginLogout</item>
+
+    </string-array>
+
+    <string name="title_Dashboard"></string>
+    <string name="title_Orders"></string>
+    <string name="title_ChangePassword"></string>
+    <string name="title_Notification"></string>
+    <string name="title_ContactUs"></string>
+    <string name="title_LoginLogout"></string>
+
+    <string-array name="spinner_load_capacity">
+
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string name="estimate_msg">The estimated fare is the price based on the rates of base quote,distance and time and is subject to other applicable adjustments. Standard Terms and Conditions Apply.</string>
+
+
+</resources>

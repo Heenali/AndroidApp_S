@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.trukker.trukkershipperuae.Bubble_layout.BubbleLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    app:bl_arrowDirection="top"
+    app:bl_arrowHeight="12dp"
+    android:layout_margin="15dp"
+    app:bl_arrowPosition="16dp"
+    android:orientation="vertical"
+    app:bl_arrowWidth="15dp"
+    app:bl_bubbleColor="#99000000"
+    app:bl_cornersRadius="20dp">
+
+    <WebView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="4dp"
+        android:id="@+id/webview"
+        android:text="BubbleLayout Popup"
+        android:textColor="@android:color/white" />
+
+</com.trukker.trukkershipperuae.Bubble_layout.BubbleLayout>

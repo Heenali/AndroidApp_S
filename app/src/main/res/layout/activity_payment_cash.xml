@@ -1,0 +1,346 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:weightSum="1">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/Appcolor"
+        android:orientation="vertical"
+       >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="17dp"
+            android:textColor="@color/white"
+            android:text="Move My Home" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+           >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="20dp"
+                android:id="@+id/form_layout">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/title_layout"
+                    android:paddingTop="10dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="we are going to be there to help you move to your new house soon !"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:id="@+id/billing_title"
+                        android:layout_toRightOf="@+id/hometype_icon"
+                        android:layout_toEndOf="@+id/hometype_icon" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/clicktitle_layout"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Make sure to fill in details of your moving contents so everything’s perfect on the day of your move. Click HERE"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:gravity="center"
+                        android:id="@+id/clicktext"
+                        android:layout_toRightOf="@+id/hometype_icon"
+                        android:layout_toEndOf="@+id/hometype_icon" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_corner_bg"
+                    android:id="@+id/id_layout"
+                    android:paddingBottom="10dp"
+                    android:gravity="center"
+                   android:paddingTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+
+                        android:background="@drawable/order_truck"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ghgfjgfhj"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="normal"
+                        android:paddingLeft="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/order_id"
+                        android:layout_toRightOf="@+id/hometype_icon"
+                        android:layout_toEndOf="@+id/hometype_icon" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/subtitle_layout"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="20dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="We can make your move much more convenient everything&apos;s perfect on the day of your move"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:paddingLeft="20dp"
+                        android:gravity="left"
+                        android:paddingRight="20dp"
+                        android:id="@+id/billing_title1"
+                        android:layout_toRightOf="@+id/hometype_icon"
+                        android:layout_toEndOf="@+id/hometype_icon" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_corner_bg"
+                    android:id="@+id/housepaint_layout"
+                    android:paddingBottom="10dp"
+
+                    android:paddingLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <ToggleButton
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:checked="false"
+                        android:textOff=""
+                        android:textOn=""
+                        android:id="@+id/toggle_oldhouse"
+                        android:background="@drawable/square_checkblanck"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Get your Old house painted"
+                        android:textColor="#000000"
+
+                        android:textSize="15dp"
+                        android:paddingLeft="5dp"
+                       android:layout_marginLeft="5dp"
+                        android:id="@+id/cash_title"
+                        android:layout_toRightOf="@+id/hometype_icon"
+                        android:layout_toEndOf="@+id/hometype_icon" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_corner_bg"
+                    android:id="@+id/houseclean_layout"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <ToggleButton
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:checked="false"
+                        android:textOff=""
+                        android:textOn=""
+                        android:id="@+id/toggle_newhouse"
+                        android:background="@drawable/square_checkblanck"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Get your New house cleaned"
+                        android:textColor="#000000"
+
+                        android:textSize="15dp"
+                        android:paddingLeft="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/online_titleg"
+                        android:layout_toRightOf="@+id/hometype_icon"
+                        android:layout_toEndOf="@+id/hometype_icon" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_corner_bg"
+                    android:id="@+id/controlservices_layout"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <ToggleButton
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:checked="false"
+                        android:textOff=""
+                        android:textOn=""
+                        android:id="@+id/toggle_pestservices"
+                        android:background="@drawable/square_checkblanck"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Get Pest Control Service"
+                        android:textColor="#000000"
+
+                        android:textSize="15dp"
+                        android:paddingLeft="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/online_titlehh"
+                        android:layout_toRightOf="@+id/hometype_icon"
+                        android:layout_toEndOf="@+id/hometype_icon" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_corner_bg"
+                    android:id="@+id/extraservices_layout"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <ToggleButton
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:checked="false"
+                        android:textOff=""
+                        android:textOn=""
+                        android:id="@+id/toggle_extraservices"
+                        android:background="@drawable/square_checkblanck"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Get Extra Storage"
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:paddingLeft="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/online_title"
+                        android:layout_toRightOf="@+id/hometype_icon"
+                        android:layout_toEndOf="@+id/hometype_icon" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:weightSum="1"
+                    android:paddingTop="20dp"
+                    android:layout_weight="0.10"
+                    android:orientation="horizontal"
+                    android:id="@+id/btn_layout">
+
+                    <TextView
+                        android:id="@+id/submit_btn"
+                        android:layout_width="0dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:layout_height="match_parent"
+                        android:text="Definitely,Yes"
+                        android:layout_margin="5dp"
+                        style="@style/submitbuttonstyle"
+                        android:gravity="center"
+                        android:background="@drawable/round_mainbutton"
+                        android:layout_weight="0.50"/>
+
+                    <TextView
+                        android:id="@+id/cancel_btn"
+                        android:layout_width="0dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_height="match_parent"
+                        android:text="Not Now"
+                        android:layout_margin="5dp"
+                        style="@style/submitbuttonstyle"
+                        android:gravity="center"
+                        android:background="@drawable/round_mainbutton_black"
+                        android:layout_weight="0.50"/>
+
+
+
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

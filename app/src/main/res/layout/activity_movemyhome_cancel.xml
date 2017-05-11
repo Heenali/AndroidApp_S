@@ -1,0 +1,137 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEBEB"
+    android:orientation="vertical"
+    android:weightSum="1">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/Appcolor"
+        android:orientation="vertical" >
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="17dp"
+            android:textColor="@color/white"
+            android:text="Cancel Order" />
+
+        <ImageView
+
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_icon" />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="Back"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:textColor="@color/white"
+            android:id="@+id/back"
+            android:layout_alignTop="@+id/next_btn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:layout_gravity="center"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="50dp"
+
+            android:id="@+id/ss">
+            <TextView
+                android:id="@+id/goodsdetails_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="40dp"
+                android:textStyle="bold"
+                android:text="You are cancelling Your Order for"
+                android:textColor="@color/gray_dark"
+                android:textSize="14sp"
+                />
+            <TextView
+                android:id="@+id/goodsdetails_text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:paddingTop="10dp"
+                android:text="Moving Goods"
+                android:textColor="@color/original_black"
+                android:textSize="18sp"
+                />
+            <TextView
+                android:id="@+id/goodsdetails_texts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:paddingTop="50dp"
+                android:text="Why You cancelling Order ?"
+                android:textColor="@color/gray_dark"
+                android:textSize="14sp"
+                />
+            <EditText
+                android:id="@+id/reason_edittext"
+                style="@style/MyEditTextstyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+               android:layout_margin="20dp"
+                android:inputType="none"
+                android:layout_weight="0.5"
+                android:background="@drawable/edittext_round_border"
+                android:drawableRight="@mipmap/down_triangle"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="Select Reason"
+                android:padding="10dp"
+                android:textSize="@dimen/font_12" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="10dp"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:orientation="horizontal"
+               >
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="24dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    style="@style/submitbuttonstyle"
+                    android:background="@drawable/round_mainbutton_black"
+                    android:text="Corfirm Cancel "
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

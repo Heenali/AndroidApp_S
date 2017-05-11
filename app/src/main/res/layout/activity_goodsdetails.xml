@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/Appcolor"
+        android:orientation="vertical" >
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="17dp"
+            android:textColor="@color/white"
+            android:text="Move Goods" />
+
+        <ImageView
+
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_icon" />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="Back"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:textColor="@color/white"
+            android:id="@+id/back"
+            android:layout_alignTop="@+id/next_btn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+          >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="25dp"
+                android:paddingTop="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="REVIEW AND CONFIRM YOUR MOVE"
+                    android:textAllCaps="true"
+                    android:textColor="@color/original_black"
+                    android:textSize="@dimen/font_12"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="10 AXLE TRAILER"
+                    android:textAllCaps="true"
+                    android:textColor="@color/dark_green"
+                    android:textSize="@dimen/font_16"
+                    android:id="@+id/trucktype_text" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@color/gray_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:weightSum="1"
+                android:id="@+id/sssss">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.45"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/moving_from_lable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="MOVING FROM"
+                        android:textColor="@color/original_black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/movingfrom_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="left"
+                        android:text="305,Sapath-IV,Pralhad nagar, S.G Highway, Ahmedabad"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/font_10" />
+                </LinearLayout>
+                <!--
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0.1"
+                                    android:background="@drawable/move_new1"
+                                    android:gravity="center_horizontal" />-->
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/gray_line" />
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/move_circle" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.45"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/moving_to_lable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="MOVING TO"
+                        android:textColor="@color/original_black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/movingto_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="right"
+                        android:text="305, Sapath-IV,Pralhad nagar, S.G Highway, Ahmedabad"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/font_10" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@color/gray_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:weightSum="1"
+               >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.99"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="DISTANCE"
+                        android:textAllCaps="true"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/font_10"
+                       />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="52 km"
+                        android:textAllCaps="true"
+                        android:textColor="@color/original_black"
+                        android:textSize="@dimen/font_10"
+                        android:textStyle="bold"
+                        android:id="@+id/distance_text" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:visibility="gone"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/gray_line" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_weight="0.00"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="ETA"
+                        android:textAllCaps="true"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/font_10" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="30 MIN"
+                        android:textAllCaps="true"
+                        android:textColor="@color/original_black"
+                        android:textSize="@dimen/font_10"
+                        android:textStyle="bold"
+                        android:id="@+id/eta_text" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@color/gray_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F2F2F2"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp"
+               >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SHIPPING DATE &amp; TIME"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="@dimen/font_12"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:gravity="center"
+                    android:paddingRight="5dp"
+                    android:weightSum="1">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="52 km"
+                        android:textAllCaps="true"
+                        android:textColor="@color/original_black"
+                        android:textSize="@dimen/font_10"
+                        android:textStyle="bold"
+                        android:layout_weight="0.5"
+                        android:id="@+id/date_text" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="52 km"
+                        android:textAllCaps="true"
+                        android:textColor="@color/original_black"
+                        android:textSize="@dimen/font_10"
+                        android:textStyle="bold"
+                        android:layout_weight="0.5"
+                        android:id="@+id/time_text" />
+
+
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:textAlignment="center"
+                    android:paddingRight="5dp"
+                    android:id="@+id/labour_layout">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="No of Helper"
+                        android:textAllCaps="true"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/font_12"
+                       />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="No of Labour"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/original_black"
+                        android:textSize="@dimen/font_12"
+                         />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:gravity="center"
+
+                    android:weightSum="1"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="No of Helper"
+                        android:textAllCaps="true"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/font_10"
+
+                        android:layout_weight="0.5"
+                        android:id="@+id/nooflable_title" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="No of installer"
+                        android:textAllCaps="true"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/font_10"
+
+                        android:layout_weight="0.5"
+                        android:id="@+id/noofinstaller_title" />
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:gravity="center"
+
+                    android:paddingRight="5dp"
+                    android:weightSum="1"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="labour"
+                        android:textAllCaps="true"
+                        android:textColor="@color/original_black"
+                        android:textSize="@dimen/font_10"
+                        android:textStyle="bold"
+                        android:layout_weight="0.5"
+                        android:id="@+id/labour_text" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="intstaller_text"
+                        android:textAllCaps="true"
+                        android:textColor="@color/original_black"
+                        android:textSize="@dimen/font_10"
+                        android:textStyle="bold"
+                        android:layout_weight="0.5"
+                        android:id="@+id/intstaller_text" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/continue_booklater"
+                android:layout_width="@dimen/size_150"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/round_corner_black_fill"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Continue"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_12" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

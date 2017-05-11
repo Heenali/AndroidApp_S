@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:weightSum="1">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/Appcolor"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title_texth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="17dp"
+            android:textColor="@color/white"
+            android:text="Quotation" />
+
+        <ImageView
+
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_icon" />
+
+        <ImageView
+
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_icon" />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="Back"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:textColor="@color/white"
+            android:id="@+id/back"
+            android:layout_alignTop="@+id/next_btn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:scrollbars="none"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/ss">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/round_corner_bg"
+                android:id="@+id/hometype_layout"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No. of Trucks"
+                    android:textColor="@color/Appcolor"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="30dp"
+                    android:id="@+id/noof_truck_title"
+                    android:layout_toRightOf="@+id/hometype_icon"
+                    android:layout_toEndOf="@+id/hometype_icon" />
+
+                <Button
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/notruck_decrese"
+                    android:background="@drawable/minus"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/noof_packing_title"
+                    android:layout_toEndOf="@+id/noof_packing_title" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="0"
+                    android:id="@+id/nooftruck_edittext"
+                    android:paddingLeft="25dp"
+                    android:textSize="15dp"
+                    android:paddingRight="25dp"
+                    android:textColor="@color/Appcolor"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/nolabour_decrese"
+                    android:layout_toEndOf="@+id/nolabour_decrese" />
+
+                <Button
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/notruck_increse"
+                    android:background="@drawable/plus"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:weightSum="1"
+
+                android:layout_weight="0.10"
+                android:orientation="horizontal"
+                android:id="@+id/sss">
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".20"
+                    android:gravity="left|center"
+
+                    android:orientation="vertical"
+                    android:id="@+id/ddd">
+
+
+
+                    <ImageView
+
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:scaleType="center"
+                        android:background="@drawable/quote_premium"
+                        android:id="@+id/quote_icon" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".80"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_corner_bg"
+                        android:gravity="left|center"
+                        android:id="@+id/hometype_layout1"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Your Base Quote"
+                            android:textAllCaps="true"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:id="@+id/basequote_title"
+                            android:layout_toRightOf="@+id/hometype_icon"
+                            android:layout_toEndOf="@+id/hometype_icon" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_corner_bg"
+                        android:gravity="left"
+                        android:id="@+id/hometype_layout11"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="11,20"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:id="@+id/basequote_edittext"
+                            android:layout_toRightOf="@+id/hometype_icon"
+                            android:layout_toEndOf="@+id/hometype_icon" />
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:gravity="center"
+                android:id="@+id/noofdays_layout"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No of Dyas 1"
+                    android:padding="2dp"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+
+                    android:id="@+id/title_text"
+                    android:layout_toRightOf="@+id/hometype_icon"
+                    android:layout_toEndOf="@+id/hometype_icon" />
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:id="@+id/labour_layout"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/nolabour_sucess"
+                    android:visibility="gone"
+                    android:background="@drawable/success"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Helper"
+                    android:textColor="@color/Appcolor"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="45dp"
+                    android:id="@+id/noof_labour_title"
+                    android:layout_toRightOf="@+id/hometype_icon"
+                    android:layout_toEndOf="@+id/hometype_icon" />
+
+                <Button
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/nolabour_decrese"
+                    android:background="@drawable/minus"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/noof_packing_title"
+                    android:layout_toEndOf="@+id/noof_packing_title" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="0"
+                    android:id="@+id/nolabour_edittext"
+                    android:paddingLeft="15dp"
+                    android:textSize="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="@color/Appcolor"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/nolabour_decrese"
+                    android:layout_toEndOf="@+id/nolabour_decrese" />
+
+                <Button
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/nolabour_increse"
+                    android:background="@drawable/plus"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="AED 200 "
+                    android:textColor="@color/Appcolor"
+                    android:gravity="right"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/labour_layout"
+                    android:layout_alignEnd="@+id/labour_layout"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:id="@+id/nolabour_value" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@android:color/darker_gray" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:background="@drawable/round_corner_bg"
+                android:id="@+id/handyman_layout"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/nohandyman_sucess"
+                    android:visibility="gone"
+                    android:background="@drawable/success"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Installer"
+                    android:textColor="@color/Appcolor"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="34dp"
+                    android:id="@+id/noof_handyman_title"
+                    android:layout_toRightOf="@+id/hometype_icon"
+                    android:layout_toEndOf="@+id/hometype_icon" />
+
+                <Button
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+
+                    android:id="@+id/nohandyman_decrese"
+                    android:background="@drawable/minus"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/noof_packing_title"
+                    android:layout_toEndOf="@+id/noof_packing_title" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="0"
+                    android:id="@+id/nohandyman_edittext"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/Appcolor"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/nolabour_decrese"
+                    android:layout_toEndOf="@+id/nolabour_decrese" />
+
+                <Button
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/nohandyman_increse"
+                    android:background="@drawable/plus"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="AED 200 "
+                    android:textColor="@color/Appcolor"
+                    android:gravity="right"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/labour_layout"
+                    android:layout_alignEnd="@+id/labour_layout"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:id="@+id/nohandyman_value" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingTop="10dp"
+                android:background="@drawable/round_corner_bg"
+                android:id="@+id/package_layout"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ToggleButton
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/nopacking_sucess"
+                    android:textOff=""
+                    android:textOn=""
+                    android:background="@drawable/check_selector"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:checked="false" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Packing Charges"
+                    android:textColor="@color/Appcolor"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="20dp"
+                    android:id="@+id/noof_packing_title"
+                    android:layout_toRightOf="@+id/hometype_icon"
+                    android:layout_toEndOf="@+id/hometype_icon" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/extra"
+                    android:visibility="gone"
+                    android:background="@drawable/minus"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/noof_packing_title"
+                    android:layout_toEndOf="@+id/noof_packing_title" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="0"
+                    android:visibility="gone"
+                    android:id="@+id/extra1"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="@color/Appcolor"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/nolabour_decrese"
+                    android:layout_toEndOf="@+id/nolabour_decrese" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AED 200 "
+                    android:textColor="@color/Appcolor"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:layout_alignParentTop="true"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:id="@+id/nopacking_value"
+                    android:layout_weight="0.97" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/package_information"
+                    android:background="@drawable/help"
+                    android:gravity="right|center"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:id="@+id/package_information_line"
+                android:background="@android:color/darker_gray" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/servicedis_layout">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:weightSum="1"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_weight="0.10"
+                    android:orientation="horizontal"
+                    android:id="@+id/dd">
+
+
+                    <TextView
+                        android:id="@+id/nameof_addons"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:ellipsize="end"
+                        android:singleLine="false"
+                        android:textColor="#000000"
+                        android:gravity="left"
+                        android:paddingRight="5dp"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:text="add ons services name dxsada a svavcs avav"
+                        android:layout_weight=".70"/>
+
+
+                    <TextView
+                        android:id="@+id/price_addons"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:gravity="left"
+                        android:text="AED 0 "
+                        android:textSize="15dp"
+                        android:layout_weight="0.30"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:weightSum="1"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_weight="0.10"
+                    android:orientation="horizontal"
+                    android:id="@+id/dd1">
+
+
+                    <TextView
+                        android:id="@+id/addons_title"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textAllCaps="true"
+                        android:textColor="#000000"
+                        android:gravity="left"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:text="SERVICE DISCOUNT"
+                        android:layout_weight=".50"/>
+
+
+                    <TextView
+                        android:id="@+id/servicedis_textd"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:gravity="left"
+                        android:text="AED 200 "
+                        android:textSize="15dp"
+                        android:layout_weight="0.50"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:weightSum="1"
+                android:paddingBottom="5dp"
+                android:paddingTop="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_weight="0.10"
+                android:orientation="horizontal"
+                android:id="@+id/total_layout">
+
+                <TextView
+                    android:id="@+id/total_amount_lable"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:gravity="left"
+                    android:textAllCaps="true"
+                     android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:text="Total Quote"
+                    android:layout_weight=".50"/>
+
+
+                <TextView
+                    android:id="@+id/total_value"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:gravity="left"
+                    android:text="AED 200 "
+                    android:textSize="15dp"
+                    android:layout_weight="0.50"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:weightSum="1"
+                android:paddingBottom="10dp"
+                android:paddingTop="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_weight="0.10"
+                android:orientation="horizontal"
+                android:id="@+id/total_layout_promp">
+
+
+
+                <TextView
+                    android:id="@+id/total_amount_lable_promp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textColor="#000000"
+                    android:gravity="left"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:text="Total Quote"
+                    android:layout_weight=".50"/>
+
+
+                <TextView
+                    android:id="@+id/total_value_promp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:gravity="left"
+                    android:text="AED 200 "
+                    android:textSize="15dp"
+                    android:layout_weight="0.50"/>
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:weightSum="1"
+                android:paddingBottom="10dp"
+                android:paddingTop="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_weight="0.10"
+                android:orientation="horizontal"
+                android:id="@+id/promocode_layout">
+
+                <EditText
+                    android:hint="PROMOCODE HERE"
+                    android:id="@+id/promocode_value"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:singleLine="true"
+                    android:padding="9dp"
+                    android:ellipsize="end"
+                    android:textColor="@color/gray_dark"
+                    android:background="@drawable/round_edittext"
+                    android:textSize="13dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.55"/>
+
+
+                <TextView
+                    android:id="@+id/applay_btn"
+                    android:layout_width="wrap_content"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:layout_height="match_parent"
+                    android:text="Apply"
+                    android:layout_margin="5dp"
+                    style="@style/submitbuttonstyle"
+                    android:gravity="center"
+                    android:textColor="#3675C5"
+                    android:background="@drawable/promocode_select"
+                    android:layout_weight="0.25"/>
+
+                <TextView
+                    android:id="@+id/discount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/Appcolor"
+                    android:gravity="center|right"
+                    android:layout_weight="0.20"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:id="@+id/tc_layout"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ToggleButton
+                    android:layout_width="75dp"
+                    android:layout_height="38dp"
+                    android:id="@+id/tc_condition"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="true"
+                    android:textOff=""
+                    android:textOn=""
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I accept Terms and Conditions"
+                    android:textColor="@color/Appcolor"
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="20dp"
+                    android:id="@+id/tc_title"
+                    android:singleLine="true"
+                    android:layout_toRightOf="@+id/hometype_icon"
+                    android:layout_toEndOf="@+id/hometype_icon" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:padding="10dp"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:orientation="horizontal"
+                >
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="24dp"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    style="@style/submitbuttonstyle"
+                    android:background="@drawable/round_mainbutton"
+                    android:text="Confirm and Submit"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

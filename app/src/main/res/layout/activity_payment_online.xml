@@ -1,0 +1,336 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:weightSum="1">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/Appcolor"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="17dp"
+            android:textColor="@color/white"
+            android:text="Move My Home" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/ss">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+
+                android:paddingBottom="20dp"
+                android:background="#EBEBEB"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:id="@+id/form_layout">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EBEBEB"
+                    android:id="@+id/bname_layout"
+                    android:paddingTop="10dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email Adddress"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="20dp"
+                        android:id="@+id/billing_title"
+                        android:layout_toRightOf="@+id/hometype_icon"
+                        android:layout_toEndOf="@+id/hometype_icon" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/emailid_layout"
+                    android:paddingTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="9dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/round_edittext"
+                        android:textSize="15dp"
+                        android:inputType="textEmailAddress"
+                        android:hint=""
+                        android:id="@+id/emailid_edittext"
+                        android:layout_toRightOf="@+id/hometype_icon"
+                        android:layout_toEndOf="@+id/hometype_icon"
+                        android:layout_weight="0.15" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EBEBEB"
+                    android:id="@+id/cardname_layout1"
+                    android:paddingTop="10dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name on Card"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="20dp"
+                        android:id="@+id/billlingadd_title1"
+                        android:layout_toRightOf="@+id/hometype_icon"
+                        android:layout_toEndOf="@+id/hometype_icon" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cardname_layout"
+                    android:paddingTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="9dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/round_edittext"
+                        android:textSize="15dp"
+                        android:inputType="text"
+                        android:hint=""
+                        android:id="@+id/cardname_edittext"
+                        android:layout_toRightOf="@+id/hometype_icon"
+                        android:layout_toEndOf="@+id/hometype_icon"
+                        android:layout_weight="0.15" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EBEBEB"
+                    android:id="@+id/badd_layout"
+                    android:paddingTop="10dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Credit/Debit Card Number"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="20dp"
+                        android:id="@+id/billlingadd_title"
+                        android:layout_toRightOf="@+id/hometype_icon"
+                        android:layout_toEndOf="@+id/hometype_icon" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:id="@+id/cardno_layout"
+                    android:paddingTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="9dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/round_edittext"
+                        android:textSize="15dp"
+                        android:inputType="number"
+                        android:hint=""
+                        android:id="@+id/cardno_edittext"
+                        android:layout_toRightOf="@+id/hometype_icon"
+                        android:layout_toEndOf="@+id/hometype_icon"
+                        android:layout_weight="0.15" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:weightSum="1"
+                    android:paddingTop="10dp"
+                    android:layout_weight="0.10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvPickup"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:gravity="center"
+                        android:text="CVV"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:layout_weight=".34"/>
+
+
+                    <TextView
+                        android:id="@+id/tvStart"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:gravity="center"
+                        android:text="Month"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:layout_weight="0.33"/>
+
+
+
+                    <TextView
+                        android:id="@+id/tvComplete"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:gravity="center"
+                        android:text="Year"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:layout_weight="0.33"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:weightSum="1"
+                    android:paddingTop="10dp"
+                    android:layout_weight="0.10"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/cvv_edittext"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:background="@drawable/round_edittext"
+                        android:textSize="15dp"
+                        android:inputType="number"
+                        android:hint=""
+                        android:layout_weight=".34"/>
+
+
+
+                    <Spinner
+                        android:id="@+id/cardexpmonth_edittext"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/black"
+                        android:background="@drawable/border_layout"
+                        android:textSize="15dp"
+                        android:gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0.33"/>
+
+
+
+                    <Spinner
+                        android:id="@+id/cardexpyear_edittext"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/black"
+                        android:background="@drawable/border_layout"
+                        android:textSize="15dp"
+                        android:gravity="center"
+
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0.33"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:weightSum="1"
+                android:paddingTop="20dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_weight="0.10"
+                android:orientation="horizontal"
+                android:id="@+id/btn_layout">
+
+                <TextView
+                    android:id="@+id/cancle_btn"
+                    android:layout_width="0dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_height="match_parent"
+                    android:text="Cancel"
+                    android:layout_margin="5dp"
+                    style="@style/submitbuttonstyle"
+                    android:gravity="center"
+                    android:background="@drawable/round_mainbutton_black"
+                    android:layout_weight="0.50"/>
+
+
+
+                <TextView
+                    android:id="@+id/pay_btn"
+                    android:layout_width="0dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:layout_height="match_parent"
+                    android:text="Pay AED "
+                    android:layout_margin="5dp"
+                    style="@style/submitbuttonstyle"
+                    android:gravity="center"
+                    android:background="@drawable/round_mainbutton"
+                    android:layout_weight="0.50"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

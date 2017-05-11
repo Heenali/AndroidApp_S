@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corner_bg"
+        android:id="@+id/comment_layout"
+        android:paddingTop="15dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:gravity="top|center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="9dp"
+            android:textColor="@color/black"
+            android:background="@drawable/round_edittext"
+            android:textSize="15dp"
+            android:hint="Feedback"
+            android:gravity="start"
+            android:lines="3"
+            android:id="@+id/feddback_edittext"
+
+            android:layout_weight="0.15" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corner_bg"
+        android:id="@+id/rating_layout"
+        android:paddingTop="15dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:gravity="top|center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:progressTint="@color/Appcolor"
+            android:progressBackgroundTint="@color/grey"
+            android:secondaryProgressTint="@color/Appcolor"
+            android:id="@+id/ratingBar" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corner_bg"
+        android:id="@+id/submit_layout"
+        android:paddingTop="15dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:gravity="top|center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <TextView
+            android:id="@+id/submit_btn"
+            android:layout_width="0dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_height="match_parent"
+            android:text="Submit"
+            android:layout_margin="5dp"
+            style="@style/submitbuttonstyle"
+            android:gravity="center"
+            android:background="@drawable/round_mainbutton_black"
+            android:layout_weight="0.50"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/layout">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@color/Appcolor"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="17dp"
+            android:textColor="@color/white"
+            android:text="Packing Material Provided" />
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/close_btn"
+            android:id="@+id/close_btn"
+            android:layout_column="0"
+            android:visibility="gone"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:gravity="center"
+            android:layout_weight="0"
+
+            android:orientation="horizontal"
+            android:id="@+id/promocode_layout">
+
+            <TextView
+                android:id="@+id/material"
+
+                android:layout_width="0dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Material "
+                android:singleLine="false"
+                android:ellipsize="end"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.40"/>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_dark" />
+            <TextView
+                android:id="@+id/size"
+                android:singleLine="false"
+                android:ellipsize="end"
+                android:layout_width="0dp"
+                android:gravity="center"
+
+                android:text="Size"
+                android:textColor="@color/black"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="15dp"
+
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.30"/>
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_dark" />
+            <TextView
+                android:id="@+id/quantity"
+                android:singleLine="false"
+                android:ellipsize="end"
+                android:layout_width="0dp"
+                android:textSize="15dp"
+
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="Quantity"
+               android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.30"/>
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:gravity="center"
+        android:layout_weight="0"
+
+        android:orientation="horizontal"
+        android:id="@+id/promocode_layout_goods">
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Title"
+            android:singleLine="false"
+            android:ellipsize="end"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.50"
+            android:id="@+id/Material1" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_dark" />
+        <TextView
+            android:id="@+id/size1"
+            android:singleLine="false"
+            android:ellipsize="end"
+            android:layout_width="0dp"
+            android:gravity="center"
+
+            android:text="Time in Minutes"
+            android:textColor="@color/black"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="15dp"
+
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.50"/>
+
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        >
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

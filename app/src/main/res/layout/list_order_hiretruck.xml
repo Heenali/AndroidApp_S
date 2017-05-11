@@ -1,0 +1,588 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:weightSum="1">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        card_view:cardCornerRadius="6dp"
+        card_view:contentPadding="5dp"
+        android:background="@android:color/white"
+        card_view:cardElevation="4dp"
+        card_view:cardMaxElevation="6dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/id_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".50"
+                    android:gravity="left|center"
+                    android:background="#00A651"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="horizontal" >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="67867867"
+                        android:singleLine="true"
+                        android:textSize="15dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:ellipsize="end"
+                        android:paddingLeft="5dp"
+                        android:textStyle="bold"
+                        android:id="@+id/id_txt" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/datetime_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".50"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:gravity="right|center"
+                    android:background="#00A651"
+                    android:orientation="horizontal" >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="12/3/2016 2:00"
+                        android:singleLine="true"
+                        android:textSize="15dp"
+                        android:ellipsize="end"
+                        android:textStyle="bold"
+                        android:paddingRight="5dp"
+                        android:gravity="right"
+                        android:textColor="#ffffff"
+                        android:id="@+id/datetime_txt" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout5"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/shedule_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".50"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="10dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Start date"
+                        android:singleLine="true"
+                        android:textSize="10dp"
+                        android:layout_gravity="left|center"
+                        android:gravity="left|center"
+                        android:ellipsize="end"
+                        android:textColor="#B2B2B2"
+                        android:id="@+id/startdatetitle_txt"/>
+
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="shedule_txtgjhgjh hbj"
+                        android:layout_marginLeft="1dp"
+                        android:singleLine="true"
+                        android:layout_gravity="right|center"
+                        android:gravity="right"
+                        android:textSize="10dp"
+                        android:ellipsize="end"
+                        android:textColor="#000000"
+                        android:id="@+id/startdate_txt" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey_light_background"/>
+
+                <LinearLayout
+                    android:id="@+id/type_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".50"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="10dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="End Date"
+                        android:singleLine="true"
+                        android:textSize="10dp"
+                        android:layout_gravity="left|center"
+                        android:gravity="left"
+                        android:ellipsize="end"
+                        android:textColor="#B2B2B2"
+                        android:id="@+id/endtitle_txt"/>
+
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="shedule_txtgjhgjh hbj"
+                        android:layout_marginLeft="1dp"
+                        android:singleLine="true"
+                        android:layout_gravity="right|center"
+                        android:gravity="right"
+                        android:textSize="10dp"
+                        android:ellipsize="end"
+                        android:textColor="#000000"
+                        android:id="@+id/enddate_txt"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_marginBottom="5dp"
+                android:layout_margin="5dp"
+                android:background="@color/grey_light_background"
+               />
+            <LinearLayout
+                android:id="@+id/layout4"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/noofdays_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".50"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="10dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="No.of days"
+                        android:singleLine="true"
+                        android:textSize="10dp"
+                        android:layout_gravity="left|center"
+                        android:gravity="left|center"
+                        android:ellipsize="end"
+                        android:textColor="#B2B2B2"
+                        android:id="@+id/noofdaystitle_txt"/>
+
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="3 Days"
+                        android:layout_marginLeft="1dp"
+                        android:singleLine="true"
+                        android:layout_gravity="right|center"
+                        android:gravity="right"
+                        android:textSize="10dp"
+                        android:ellipsize="end"
+                        android:textColor="#000000"
+                        android:id="@+id/noofdays_txt" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey_light_background"/>
+
+                <LinearLayout
+                    android:id="@+id/trucktype_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".50"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="10dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Truck Type"
+                        android:singleLine="true"
+                        android:textSize="10dp"
+                        android:layout_gravity="left|center"
+                        android:gravity="left"
+                        android:ellipsize="end"
+                        android:textColor="#B2B2B2"
+                        android:id="@+id/trucktypetitle_txt"/>
+
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="3 ton"
+                        android:layout_marginLeft="1dp"
+                        android:singleLine="true"
+                        android:layout_gravity="right|center"
+                        android:gravity="right"
+                        android:textSize="10dp"
+                        android:ellipsize="end"
+                        android:textColor="#000000"
+                        android:id="@+id/trucktype_txt"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_marginBottom="5dp"
+                android:layout_margin="5dp"
+                android:background="@color/grey_light_background" />
+            <LinearLayout
+                android:id="@+id/layoutj7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/movingfromtitle_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Moving From"
+                        android:maxLines="1"
+                        android:textColor="#000000"
+                        android:textSize="12dp"
+                        android:ellipsize="end"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:id="@+id/movingfrom_title" />
+
+                </LinearLayout>
+
+
+           </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/movingfrom_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                   android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="ghjghjghjgjhghj ncvfgjfyjghguigtyi uhuiyhi"
+                        android:maxLines="3"
+                        android:textColor="#B2B2B2"
+                        android:textAlignment="center"
+                        android:textSize="12dp"
+                        android:ellipsize="end"
+                        android:id="@+id/movingfrom_txt" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"
+                android:gravity="center"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:visibility="gone"
+                    android:id="@+id/progress_status_icon" />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:textColor="#D35316"
+                android:textAllCaps="true"
+                android:text="You Have Cancelled this order"
+                android:id="@+id/cancle_button" />
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:visibility="gone"
+                android:id="@+id/reschule_layout">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="13dp"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/green"
+                    android:text="Reschedule Requested"
+                    android:id="@+id/reschule_button" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ratingdetail_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:background="@color/grey"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+
+                <LinearLayout
+                    android:id="@+id/rating_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".70"
+                    android:gravity="left|center"
+                    android:padding="10dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="9dp"
+                        android:background="@drawable/order_rate"
+                        android:id="@+id/rating_icon" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="4.5/5"
+                        android:singleLine="true"
+                        android:textSize="15dp"
+                        android:ellipsize="end"
+                        android:textColor="#000000"
+
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/rating_txt" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Rate"
+                        android:paddingRight="15dp"
+                        android:singleLine="true"
+                        android:textSize="18dp"
+                        android:ellipsize="end"
+                        android:textColor="#00AEEF"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/setrating" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ratingaed_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".30"
+                    android:gravity="center|right"
+                    android:padding="5dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="AED 2000"
+                        android:singleLine="true"
+                        android:textSize="12dp"
+                        android:ellipsize="end"
+                        android:textColor="#000000"
+
+
+                        android:id="@+id/totalcost_txt" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/driverdetail_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/driver_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".80"
+                    android:gravity="left|center"
+                    android:padding="10dp"
+                    android:background="#EBEBEB"
+                    android:orientation="horizontal" >
+
+
+
+                    <com.meg7.widget.CircleImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_profile"
+                        android:id="@+id/driver_icon" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Small Text"
+                        android:singleLine="true"
+                        android:textSize="15dp"
+                        android:ellipsize="end"
+                        android:textColor="#000000"
+
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/drivername_txt" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/calling_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".20"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:background="#EBEBEB"
+                    android:orientation="horizontal" >
+
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/order_call"
+                        android:id="@+id/calling_icon" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

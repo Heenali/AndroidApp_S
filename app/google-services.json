@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "701822967576",
+    "firebase_url": "https://trukkershipper-e3929.firebaseio.com",
+    "project_id": "trukkershipper-e3929",
+    "storage_bucket": "trukkershipper-e3929.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701822967576:android:0f7d7a02fb07612d",
+        "android_client_info": {
+          "package_name": "com.trukker.trukkershipperuae"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "701822967576-mmj88lbcv9vpjbc9tfp98kpe6pf3l0bq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.trukker.trukkershipperuae",
+            "certificate_hash": "684F19DF1F9C846BDBE9084227682B183E5924E8"
+          }
+        },
+        {
+          "client_id": "701822967576-s6pvor1ke8tar9hjadifo7l99js1f475.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7rx8yOH_BiWqm0wCkIkSnevyq2rot50o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "701822967576-s6pvor1ke8tar9hjadifo7l99js1f475.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

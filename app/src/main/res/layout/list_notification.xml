@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card_view"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:padding="2dp"
+                android:text="dgd"
+                android:textColor="@color/gray"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_alignTop="@+id/date"
+                android:layout_alignLeft="@+id/subtitle"
+                android:layout_alignStart="@+id/subtitle"
+                android:layout_toLeftOf="@+id/date"
+                android:layout_toStartOf="@+id/date" />
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:maxLines="3"
+            android:padding="2dp"
+            android:text="dddd"
+            android:textColor="@color/grey"
+            android:textSize="14dp"
+            android:id="@+id/subtitle" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:gravity="right"
+                android:ellipsize="end"
+                android:text="14 Dec,2016 00:48 AM"
+                android:textColor="@color/grey"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

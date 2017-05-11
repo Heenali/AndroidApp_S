@@ -1,0 +1,249 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:weightSum="1">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/dashbors_theame" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:fillViewport="true"
+        android:isScrollContainer="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:id="@+id/ss">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:id="@+id/total_layouts"
+                android:paddingTop="10dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile Number"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="20dp"
+                    android:id="@+id/mobileni_title"
+                    android:layout_toRightOf="@+id/hometype_icon"
+                    android:layout_toEndOf="@+id/hometype_icon" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:id="@+id/mno_layout"
+                android:paddingTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="9dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/round_edittext"
+                    android:textSize="15dp"
+                    android:hint=""
+                    android:inputType="number"
+                    android:id="@+id/mno_edittext"
+                    android:layout_toRightOf="@+id/hometype_icon"
+                    android:layout_toEndOf="@+id/hometype_icon"
+                    android:layout_weight="0.15" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:id="@+id/total_layout"
+                android:paddingTop="10dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Name"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="20dp"
+                    android:id="@+id/total_title"
+                    android:layout_toRightOf="@+id/hometype_icon"
+                    android:layout_toEndOf="@+id/hometype_icon" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:id="@+id/promocode_layout"
+                android:paddingTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="9dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/round_edittext"
+                    android:textSize="15dp"
+android:singleLine="true"
+                    android:hint=""
+                    android:id="@+id/name_edittext"
+                    android:layout_toRightOf="@+id/hometype_icon"
+                    android:layout_toEndOf="@+id/hometype_icon"
+                    android:layout_weight="0.15" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:id="@+id/ss_layout"
+                android:paddingTop="10dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subject"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:singleLine="true"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="20dp"
+                    android:id="@+id/subject_title"
+                    android:layout_toRightOf="@+id/hometype_icon"
+                    android:layout_toEndOf="@+id/hometype_icon" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:id="@+id/subject_layout"
+                android:paddingTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="9dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/round_edittext"
+                    android:textSize="15dp"
+                    android:singleLine="true"
+                    android:hint=""
+                    android:id="@+id/subject_edittext"
+                    android:layout_toRightOf="@+id/hometype_icon"
+                    android:layout_toEndOf="@+id/hometype_icon"
+                    android:layout_weight="0.15" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:id="@+id/subjecttitle_layout"
+                android:paddingTop="10dp"
+
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Meassage or Query"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="20dp"
+                    android:id="@+id/subject_"
+                    android:layout_toRightOf="@+id/hometype_icon"
+                    android:layout_toEndOf="@+id/hometype_icon" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:id="@+id/mess_layout"
+                android:paddingTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="9dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/round_edittext"
+                    android:textSize="15dp"
+                    android:hint=""
+                    android:lines="5"
+
+                    android:inputType="textMultiLine"
+                    android:imeOptions="actionDone"
+                    android:gravity="start"
+
+                    android:id="@+id/mess_edittext"
+                    android:layout_toRightOf="@+id/hometype_icon"
+                    android:layout_toEndOf="@+id/hometype_icon"
+                    android:layout_weight="0.15" />
+
+            </LinearLayout>
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/submit_btn"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/round_mainbutton"
+                    style="@style/submitbuttonstyle"
+                    android:text="SUBMIT"
+                     />
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>

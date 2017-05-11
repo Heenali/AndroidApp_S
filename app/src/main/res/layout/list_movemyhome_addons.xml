@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:id="@+id/whole_layout">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:singleLine="true"
+            android:gravity="left|center"
+            android:textColor="@color/original_black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="Total Amount"
+            android:layout_weight=".50"/>
+
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/gray_dark"
+            android:gravity="right"
+            android:text="AED 200 "
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="12sp"
+            android:layout_weight="0.30"/>
+
+        <TextView
+            android:id="@+id/hideselection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:textColor="@color/gray_dark"
+            android:gravity="right"
+            android:text=""
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="12sp"
+            android:layout_weight="0.10"/>
+
+        <LinearLayout
+            android:id="@+id/open_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.20"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:background="@drawable/toggle_selector"
+                android:id="@+id/arrow_icon" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="horizontal"
+        android:id="@+id/feture_layout">
+
+        <LinearLayout
+            android:id="@+id/condition_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".0"
+            android:gravity="center"
+            android:padding="5dp"
+            android:background="#EBEBEB"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:id="@+id/tc_condition1"
+                android:background="@drawable/toggle_selector"
+                android:checked="false"
+                android:textOff=""
+                android:visibility="gone"
+                android:textOn=""
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/size_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".80"
+            android:gravity="center"
+            android:padding="5dp"
+            android:background="#EBEBEB"
+            android:orientation="horizontal" >
+
+
+            <Spinner
+                android:id="@+id/sel_size"
+                style="@style/MyEditTextstyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                 android:layout_margin="5dp"
+                android:inputType="none"
+
+                android:layout_weight="0.5"
+                android:background="@drawable/spinner_round_border"
+                android:focusable="false"
+                android:hint="Select Size"
+                android:padding="10dp"
+               />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/help_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".20"
+            android:gravity="center"
+            android:padding="5dp"
+            android:background="#EBEBEB"
+            android:orientation="horizontal" >
+
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/help"
+                android:id="@+id/help_icon" />
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+    <View
+        android:id="@+id/shade_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_margin="5dp"
+        android:background="@color/gray_light" />
+
+</LinearLayout>

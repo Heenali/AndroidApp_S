@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:weightSum="1">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/Appcolor"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="17dp"
+            android:textColor="@color/white"
+            android:text="Move My Home" />
+
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/ss">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:id="@+id/truck_layout"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Truck :3"
+                    android:textAllCaps="true"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/total_truck"
+                    android:layout_toRightOf="@+id/hometype_icon"
+                    android:layout_toEndOf="@+id/hometype_icon" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:id="@+id/labour_layout"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Labour :20"
+                    android:textAllCaps="true"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/total_labour"
+                    android:layout_toRightOf="@+id/hometype_icon"
+                    android:layout_toEndOf="@+id/hometype_icon" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="20dp"
+                android:id="@+id/hemdyman_layout1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Hendyman :3"
+                    android:textAllCaps="true"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/total_handyman"
+                    android:layout_toRightOf="@+id/hometype_icon"
+                    android:layout_toEndOf="@+id/hometype_icon" />
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@android:color/darker_gray" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:weightSum="1"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_weight="0.10"
+                android:orientation="horizontal"
+                android:id="@+id/total_layout">
+
+                <TextView
+                    android:id="@+id/total_amount_lable"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:gravity="left"
+
+                    android:textSize="20dp"
+                    android:text="Total Amount"
+                    android:layout_weight=".50"/>
+
+
+                <TextView
+                    android:id="@+id/total_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:gravity="left"
+                    android:text="AED 200 "
+                    android:textSize="20dp"
+
+                    android:layout_weight="0.30"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:weightSum="1"
+                android:paddingBottom="10dp"
+                android:paddingTop="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_weight="0.10"
+                android:orientation="horizontal"
+                android:id="@+id/total_layout_promp">
+
+                <TextView
+                    android:id="@+id/total_amount_lable_promp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:gravity="left"
+                    android:textSize="20dp"
+                    android:text="Total Amount"
+                    android:layout_weight=".50"/>
+
+
+                <TextView
+                    android:id="@+id/total_value_promp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:gravity="left"
+                    android:text="AED 200 "
+                    android:textSize="20dp"
+
+                    android:layout_weight="0.30"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:weightSum="1"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_weight="0.10"
+                android:orientation="horizontal"
+                android:id="@+id/promocode_layout">
+
+                <EditText
+                    android:hint="PROMOCODE HERE"
+                    android:id="@+id/promocode_value"
+android:layout_marginRight="10dp"
+                    android:layout_width="0dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:padding="9dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/round_edittext"
+                    android:textSize="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.50"/>
+
+
+
+                <TextView
+                    android:id="@+id/applay_btn"
+                    android:layout_width="0dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:layout_height="match_parent"
+                    android:text="Apply"
+                    android:layout_margin="5dp"
+                    style="@style/submitbuttonstyle"
+                    android:gravity="center"
+                    android:background="@drawable/round_mainbutton_black"
+                    android:layout_weight="0.30"/>
+
+                <TextView
+                    android:id="@+id/discount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/Appcolor"
+                    android:gravity="center|right"
+                    android:layout_weight="0.20"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+                android:id="@+id/tc_layout"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ToggleButton
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/tc_condition"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:textOff=""
+                    android:textOn=""
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I accept Terms and Conditions"
+                    android:textColor="@color/Appcolor"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="20dp"
+                    android:id="@+id/tc_title"
+                    android:layout_toRightOf="@+id/hometype_icon"
+                    android:layout_toEndOf="@+id/hometype_icon" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg"
+
+                android:gravity="center"
+                android:paddingTop="15dp"
+                android:orientation="horizontal"
+                >
+
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="24dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    style="@style/submitbuttonstyle"
+                    android:background="@drawable/round_mainbutton"
+                    android:text="Confirm and Submit"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </ScrollView>
+</LinearLayout>

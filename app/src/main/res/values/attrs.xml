@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <declare-styleable name="Tooltip">
+        <attr name="cancelable" format="boolean"/>
+        <attr name="dismissOnClick" format="boolean"/>
+        <attr name="backgroundColor" format="color"/>
+        <attr name="cornerRadius" format="dimension"/>
+        <attr name="arrowHeight" format="dimension"/>
+        <attr name="arrowWidth" format="dimension"/>
+        <attr name="arrowDrawable" format="reference"/>
+        <attr name="margin" format="dimension"/>
+        <attr name="textAppearance" format="reference"/>
+        <attr name="android:padding"/>
+        <attr name="android:text"/>
+        <attr name="android:textSize"/>
+        <attr name="android:textColor"/>
+        <attr name="android:textStyle"/>
+        <attr name="android:gravity"/>
+        <attr name="android:fontFamily"/>
+        <attr name="android:typeface"/>
+        <attr name="android:lineSpacingExtra"/>
+        <attr name="android:lineSpacingMultiplier"/>
+    </declare-styleable>
+
+    <declare-styleable name="StepperIndicator" tools:ignore="ResourceName">
+        <attr name="stpi_stepCount" format="integer"/>
+        <attr name="stpi_animDuration" format="integer"/>
+
+        <attr name="stpi_circleColor" format="color"/>
+        <attr name="stpi_circleRadius" format="dimension"/>
+        <attr name="stpi_circleStrokeWidth" format="dimension"/>
+
+        <attr name="stpi_indicatorColor" format="color"/>
+        <attr name="stpi_indicatorRadius" format="dimension"/>
+
+        <attr name="stpi_lineColor" format="color"/>
+        <attr name="stpi_lineDoneColor" format="color"/>
+        <attr name="stpi_lineStrokeWidth" format="dimension"/>
+        <attr name="stpi_lineMargin" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="BubbleLayout">
+        <attr name="bl_arrowWidth" format="dimension|reference" />
+        <attr name="bl_cornersRadius" format="dimension|reference" />
+        <attr name="bl_arrowHeight" format="dimension|reference" />
+        <attr name="bl_arrowPosition" format="dimension|reference" />
+        <attr name="bl_bubbleColor" format="color|reference" />
+        <attr name="bl_strokeWidth" format="dimension|reference" />
+        <attr name="bl_strokeColor" format="color|reference" />
+
+        <attr name="bl_arrowDirection" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="top" value="2" />
+            <enum name="bottom" value="3" />
+        </attr>
+    </declare-styleable>
+</resources>
