@@ -499,8 +499,8 @@ public class Fragment_Dashboard extends Fragment
                         PackageInfo info = manager.getPackageInfo(getContext().getPackageName(), 0);
                         String version = info.versionCode+"";
                         Constants.versionCode_app=version;
-
-                        if(Integer.parseInt(Constants.versionCode_playstore)>Integer.parseInt(Constants.versionCode_app))
+                       // if(Integer.parseInt(Constants.versionCode_playstore)>Integer.parseInt(Constants.versionCode_app))
+                        if(5>Integer.parseInt(Constants.versionCode_app))
                         {
 
                             android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(Fragment_Dashboard.this.getActivity());

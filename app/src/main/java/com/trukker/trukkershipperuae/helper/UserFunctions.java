@@ -17,12 +17,12 @@ public class UserFunctions
 {
 	private JSONParser jsonParser;
 
-	public static String URL = "http://43.239.146.75/trukkerUAE/Api/";  //  local only
-  //public static String URL = "http://trukker.ae/trukkerUAEApitest/Api/";  //live only
-  	//public static String URL = "http://trukker.ae/trukkerUAEApi/Api/"; s //live only
+	//public static String URL = "http://43.239.146.75/trukkerUAE/Api/";  //  local only
+  public static String URL = "http://trukker.ae/trukkerUAEApitest/Api/";  //live only
+  	//public static String URL = "http://trukker.ae/trukkerUAEApi/Api/";  //live only
 
-	public static String URLIMG=  "http://43.239.146.75/trukkerUAE";
-	//public static String URLIMG=  "http://trukker.ae/trukkerUAEApitest";
+	//public static String URLIMG=  "http://43.239.146.75/trukkerUAE";
+	public static String URLIMG=  "http://trukker.ae/trukkerUAEApitest";
 	//public static String URLIMG=  "http://trukker.ae/trukkerUAEApi";
 
 	Context context;

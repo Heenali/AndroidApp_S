@@ -204,7 +204,26 @@ public class Activity_Hire_completed extends AppCompatActivity
                             Constants.payment_json="";
 
                         }
-                        UF.msg(message + "");
+                        if(status.equalsIgnoreCase("0"))
+                        {
+                            AlertDialog alertDialog = new AlertDialog.Builder(Activity_Hire_completed.this, R.style.AppTheme_Dark_Dialog).create();
+                            alertDialog.setTitle("payment failed");
+                            alertDialog.setCancelable(false);
+                            alertDialog.setMessage("Error : "+message);
+                            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int which)
+                                        {
+                                            dialog.dismiss();
+                                        }
+                                    });
+                            alertDialog.show();
+                        }
+                        else
+                        {
+                            UF.msg(message + "");
+                        }
+
                     }
                     catch (Exception e)
                     {
