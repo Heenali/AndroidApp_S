@@ -99,18 +99,36 @@ public class Fragment_Dashboard extends Fragment
         loading = new ProgressDialog(getContext().getApplicationContext());
         try
         {
-            loading = new ProgressDialog(getContext());
-            loading.getWindow().setBackgroundDrawable(new
+            if (cd.isConnectingToInternet())
+            {
+                loading = new ProgressDialog(getContext());
+                loading.getWindow().setBackgroundDrawable(new
 
-                    ColorDrawable(android.graphics.Color.TRANSPARENT));
-            loading.setIndeterminate(true);
-            loading.setCancelable(false);
-            loading.show();
-            loading.setContentView(R.layout.my_progress);
-            String url = UserFunctions.URL + "postorder/GetParameterDetails?paramvalue=PP";
-            SyncMethod_ppurl(url);
+                        ColorDrawable(android.graphics.Color.TRANSPARENT));
+                loading.setIndeterminate(true);
+                loading.setCancelable(false);
+                loading.show();
+                loading.setContentView(R.layout.my_progress);
+                String url = UserFunctions.URL + "postorder/GetParameterDetails?paramvalue=PP";
+                SyncMethod_ppurl(url);
+            }
+            else
+            {
+                UF.msg("Please check your internet connection.");
+            }
+
         }
-        catch (Exception e) {
+        catch (Exception e)
+        {
+        }
+        try
+        {
+
+            String url = UserFunctions.URL + "postorder/GetParameterDetails?paramvalue=SHVERSION";
+            SyncMethod_version(url);
+        }
+        catch (Exception e)
+        {
 
         }
 
@@ -415,6 +433,109 @@ public class Fragment_Dashboard extends Fragment
 
                         String currentVersion =getActivity().getPackageManager().getPackageInfo(getActivity().getPackageName(), 0).versionName;
                         Constants.currentVersion_apk=currentVersion;
+
+
+                    } catch (Exception e) {
+
+                    }
+
+
+                }
+            };
+        });
+        // Start Thread
+        background.start();
+    }
+    public void SyncMethod_version(final String GetUrl)
+    {
+        Log.i("Url.............", GetUrl);
+        final Thread background = new Thread(new Runnable() {
+            // After call for background.start this run method call
+            public void run() {
+                try {
+                    String url = GetUrl;
+                    String SetServerString = "";
+                    // document all_stuff = null;
+
+                    SetServerString = fetchResult(url);
+                    threadMsg(SetServerString);
+                } catch (Throwable t) {
+                    Log.e("Animation", "Thread  exception " + t);
+                }
+            }
+
+            private void threadMsg(String msg) {
+
+                if (!msg.equals(null) && !msg.equals("")) {
+                    Message msgObj = handler11.obtainMessage();
+                    Bundle b = new Bundle();
+                    b.putString("message", msg);
+                    msgObj.setData(b);
+                    handler11.sendMessage(msgObj);
+                }
+            }
+
+            // Define the Handler that receives messages from the thread and update the progress
+            private final Handler handler11 = new Handler() {
+                public void handleMessage(Message msg) {
+                    try {
+                        String aResponse = msg.getData().getString("message");
+                        Log.e("Exam", "screen>>" + aResponse);
+                        aResponse = aResponse.trim();
+                        aResponse = aResponse.substring(1, aResponse.length() - 1);
+                        aResponse = aResponse.replace("\\", "");
+                        loading.cancel();
+
+                        JSONObject get_res = new JSONObject(aResponse);
+                        JSONArray array = new JSONArray();
+
+                        array = get_res.getJSONArray("message");
+                        Log.e("mess", "screen>>" + array.toString());
+
+                        Log.e("mess", "screen>>" + array.getJSONObject(0).getString("Value").toString());
+                        Constants.versionCode_playstore=array.getJSONObject(0).getString("Value").toString();
+
+                        PackageManager manager = getContext().getPackageManager();
+                        PackageInfo info = manager.getPackageInfo(getContext().getPackageName(), 0);
+                        String version = info.versionCode+"";
+                        Constants.versionCode_app=version;
+
+                        if(Integer.parseInt(Constants.versionCode_playstore)>Integer.parseInt(Constants.versionCode_app))
+                        {
+
+                            android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(Fragment_Dashboard.this.getActivity());
+
+                            builder.setMessage("Now TruKKer App Update available in playstore (Are you sure you want to update)");
+                            builder.setTitle("TruKKer UPDATE ");
+                            builder.setCancelable(false);
+                            builder.setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                            {
+                                public void onClick(DialogInterface dialog, int which)
+                                {
+                                    try
+                                    {
+                                        getActivity().finish();
+                                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + "com.trukker.trukkershipperuae")));
+                                    }
+                                    catch (android.content.ActivityNotFoundException anfe) {
+                                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + "com.trukker.trukkershipperuae")));
+                                    }
+
+                                }
+                            });
+
+                            builder.setNegativeButton("Cancel",
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            dialog.cancel();
+                                            getActivity(). finish();
+                                        }
+                                    });
+                            builder.create().show();
+
+
+
+                        }
 
 
                     } catch (Exception e) {

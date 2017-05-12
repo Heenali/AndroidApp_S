@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Constants
 {
-
+    public static String versioncode="0";
     public static String versionCode_app="0";
     public static String versionCode_playstore="0";
     // moving goods variables

@@ -459,6 +459,7 @@ void  checkint()
         else
         {
             android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(MainActivity.this);
+            builder.setCancelable(false);
             builder.setMessage("No Internet connection.(You need to be Connected to internet, please turn it on and try again)");
                     // builder.setTitle("New Order");
 
@@ -466,6 +467,7 @@ void  checkint()
                     {
                         public void onClick(DialogInterface dialog, int which) {
 
+                            finish();
                             startActivityForResult(new Intent(android.provider.Settings.ACTION_SETTINGS), 0);
 
                         }
@@ -473,8 +475,11 @@ void  checkint()
 
             builder.setNegativeButton("Cancel",
                     new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
+                        public void onClick(DialogInterface dialog, int which)
+                        {
+
                             dialog.cancel();
+                            finish();
                         }
                     });
             builder.create().show();
