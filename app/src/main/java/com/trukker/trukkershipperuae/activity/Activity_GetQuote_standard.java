@@ -212,11 +212,7 @@ public class Activity_GetQuote_standard extends AppCompatActivity
         tc_title.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(getApplicationContext(), "sssss", Toast.LENGTH_SHORT).show();
-                // Intent i = new Intent(Activity_GetQuote_premium.this,Activity_PDFfileopen.class);
-                // i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                // startActivity(i);
-                // finish();
+
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.ppurl));
                 startActivity(browserIntent);
 

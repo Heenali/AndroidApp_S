@@ -1580,12 +1580,7 @@ public class Activity_Goods_payment extends AppCompatActivity
                         public void onSuccess(Map<String, String> requestParamsMap, Map<String, String> fortResponseMap)
                         {
 
-                           /* Intent i = new Intent(Activity_Goods_payment.this,Activity_Goods_Compelted.class);
-                            i.putExtra("page", "online");
-                            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                            startActivity(i);
-                            overridePendingTransition(R.anim.right_in, R.anim.left_out);
-                            finish();*/
+
                             String value="";
                             for (Map.Entry entry : fortResponseMap.entrySet())
                             {
@@ -1830,10 +1825,9 @@ public class Activity_Goods_payment extends AppCompatActivity
                 protected FilterResults performFiltering(CharSequence constraint) {
                     FilterResults filterResults = new FilterResults();
                     if (constraint != null) {
-                        // Retrieve the autocomplete results.
+
                         resultList = autocomplete_so(constraint.toString());
 
-                        // Assign the data to the FilterResults
                         filterResults.values = resultList;
                         filterResults.count = resultList.size();
                     }
