@@ -786,7 +786,7 @@ public class Activity_GetQuote extends AppCompatActivity
                 prmsLogin.put("inquiry_destionation_lng", Constants.postloaddestLong);
                 prmsLogin.put("destination_pincode", "");
                 prmsLogin.put("remarks", "");
-                prmsLogin.put("payment_mode", "o");
+                prmsLogin.put("payment_mode", "");
                 prmsLogin.put("load_inquiry_truck_type", "");
                 prmsLogin.put("created_host", android_id.toString());
                 prmsLogin.put("created_by", "");
@@ -849,13 +849,12 @@ public class Activity_GetQuote extends AppCompatActivity
                             String totlecost_pri = array.getJSONObject(0).getString("Total_cost").toString();
                             String totlecost_stan = array.getJSONObject(1).getString("Total_cost").toString();
                             String totlecost_saving = array.getJSONObject(2).getString("Total_cost").toString();
-                          //  Toast.makeText(getApplicationContext(),totlecost_saving,Toast.LENGTH_LONG).show();
 
 
                             String NoOfTruck_p = array.getJSONObject(0).getString("NoOfTruck").toString();
                             String NoOfLabour_p = array.getJSONObject(0).getString("NoOfLabour").toString();
                             String NoOfHandiman_p = array.getJSONObject(0).getString("NoOfHandiman").toString();
-                            String BaseRate_p = array.getJSONObject(0).getString("BaseRate").toString();
+                            String BaseRate_p = array.getJSONObject(0).getString("Total_cost_without_discount").toString();
                             String TotalLabourRate_p = array.getJSONObject(0).getString("TotalLabourRate").toString();
                             String TotalHandimanRate_p = array.getJSONObject(0).getString("TotalHandimanRate").toString();
                             String TotalPackingRate_p = array.getJSONObject(0).getString("TotalPackingRate").toString();
@@ -875,7 +874,6 @@ public class Activity_GetQuote extends AppCompatActivity
                             String NoOfHandiman_saving = array.getJSONObject(2).getString("NoOfHandiman").toString();
 
                             String BaseRate_saving = array.getJSONObject(2).getString("BaseRate").toString();
-                           // Toast.makeText(getApplicationContext(),BaseRate_saving,Toast.LENGTH_LONG).show();
                             String TotalLabourRate_saving = array.getJSONObject(2).getString("TotalLabourRate").toString();
                             String TotalHandimanRate_saving = array.getJSONObject(2).getString("TotalHandimanRate").toString();
                             String TotalPackingRate_saving = array.getJSONObject(2).getString("TotalPackingRate").toString();
@@ -1045,7 +1043,7 @@ public class Activity_GetQuote extends AppCompatActivity
                 prmsLogin.put("inquiry_destionation_lng", Constants.postloaddestLong);
                 prmsLogin.put("destination_pincode", "");
                 prmsLogin.put("remarks", "");
-                prmsLogin.put("payment_mode", "o");
+                prmsLogin.put("payment_mode", "");
                 prmsLogin.put("load_inquiry_truck_type", "");
                 prmsLogin.put("created_host", android_id.toString());
                 prmsLogin.put("created_by", "");

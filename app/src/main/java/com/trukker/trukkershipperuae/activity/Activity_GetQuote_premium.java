@@ -211,7 +211,7 @@ public class Activity_GetQuote_premium extends AppCompatActivity
             nolabour_edittext.setText(Constants.store_NoOfLabour_p);
             nohandyman_edittext.setText(Constants.store_NoOfHandiman_p);
 
-            String basequotevalue=Constants.store_totalcost_p+"<font size=\"8\"> AED"+ "</font>";
+            String basequotevalue=Constants.store_BaseRate_p+"<font size=\"8\"> AED"+ "</font>";
             basequote_edittext.setText(Html.fromHtml(basequotevalue));
 
             nolabour_value.setText("AED "+Constants.store_TotalLabourRate_p);
@@ -529,7 +529,7 @@ public class Activity_GetQuote_premium extends AppCompatActivity
                             String NoOfTruck_s= array.getJSONObject(0).getString("NoOfTruck").toString();
                             String NoOfLabour_s= array.getJSONObject(0).getString("NoOfLabour").toString();
                             String NoOfHandiman_s= array.getJSONObject(0).getString("NoOfHandiman").toString();
-                            String BaseRate_s= array.getJSONObject(0).getString("BaseRate").toString();
+                            String BaseRate_s= array.getJSONObject(0).getString("Total_cost_without_discount").toString();
                             String TotalLabourRate_s= array.getJSONObject(0).getString("TotalLabourRate").toString();
                             String TotalHandimanRate_s= array.getJSONObject(0).getString("TotalHandimanRate").toString();
                             String TotalPackingRate_s= array.getJSONObject(0).getString("TotalPackingRate").toString();

@@ -1196,7 +1196,8 @@ public class Activity_MoveMyHome_Addons extends AppCompatActivity
                                     Constants.store_NoOfTruck_p=NoOfTruck_s;
                                     Constants.store_NoOfLabour_p=NoOfLabour_s;
                                     Constants.store_NoOfHandiman_p=NoOfHandiman_s;
-                                    Constants.store_BaseRate_p=BaseRate_s;
+                                    String BaseRate_s11= array.getJSONObject(0).getString("Total_cost_without_discount").toString();
+                                    Constants.store_BaseRate_p=BaseRate_s11;
                                     Constants.store_TotalLabourRate_p=TotalLabourRate_s;
                                     Constants.store_TotalHandimanRate_p=TotalHandimanRate_s;
                                     Constants.store_TotalPackingRate_p=TotalPackingRate_s;

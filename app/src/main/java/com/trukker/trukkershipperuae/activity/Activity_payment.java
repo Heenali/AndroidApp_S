@@ -1833,7 +1833,8 @@ public class Activity_payment extends AppCompatActivity
                                 Constants.store_NoOfTruck_p=NoOfTruck_s;
                                 Constants.store_NoOfLabour_p=NoOfLabour_s;
                                 Constants.store_NoOfHandiman_p=NoOfHandiman_s;
-                                Constants.store_BaseRate_p=BaseRate_s;
+                                String Total_cost_without_discount= array.getJSONObject(0).getString("Total_cost_without_discount").toString();
+                                Constants.store_BaseRate_p=Total_cost_without_discount;
                                 Constants.store_TotalLabourRate_p=TotalLabourRate_s;
                                 Constants.store_TotalHandimanRate_p=TotalHandimanRate_s;
                                 Constants.store_TotalPackingRate_p=TotalPackingRate_s;
