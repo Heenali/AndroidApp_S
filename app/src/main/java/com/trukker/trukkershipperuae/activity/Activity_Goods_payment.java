@@ -1269,9 +1269,12 @@ public class Activity_Goods_payment extends AppCompatActivity
                                 android_id_sdk = FortSdk.getDeviceId (Activity_Goods_payment.this);
                                 UF = new UserFunctions(Activity_Goods_payment.this);
                                 Log.i("signature", android_id_sdk);
-                              String text = "jgjsgcyfy6rfhkfaccess_code=gUErE32CkOPj2QGLqL97device_id="+android_id_sdk+"language=enmerchant_identifier=UIxcLVrJservice_command=SDK_TOKENjgjsgcyfy6rfhkf";
 
-                              // String text ="reqtrukker2016access_code=ZbzswidlgkuYgQhgDViYdevice_id="+android_id_sdk+"language=enmerchant_identifier=GqJmbjUhservice_command=SDK_TOKENreqtrukker2016";
+                                //test
+                             // String text = "jgjsgcyfy6rfhkfaccess_code=gUErE32CkOPj2QGLqL97device_id="+android_id_sdk+"language=enmerchant_identifier=UIxcLVrJservice_command=SDK_TOKENjgjsgcyfy6rfhkf";
+
+                                //live
+                              String text ="reqtrukker2016access_code=ZbzswidlgkuYgQhgDViYdevice_id="+android_id_sdk+"language=enmerchant_identifier=GqJmbjUhservice_command=SDK_TOKENreqtrukker2016";
 
                                 Log.e("hash key.....", text);
 
@@ -1499,23 +1502,28 @@ public class Activity_Goods_payment extends AppCompatActivity
 
                     JSONObject prms = new JSONObject();
                     JSONObject prmsLogin = new JSONObject();
-                   /* prmsLogin.put("access_code", "ZbzswidlgkuYgQhgDViY");
+                    //live
+                   prmsLogin.put("access_code", "ZbzswidlgkuYgQhgDViY");
                     prmsLogin.put("device_id", android_id_sdk);
                     prmsLogin.put("language", "en");
                     prmsLogin.put("merchant_identifier", "GqJmbjUh");
                     prmsLogin.put("service_command", "SDK_TOKEN");
-                    prmsLogin.put("signature", sb.toString());*/
+                    prmsLogin.put("signature", sb.toString());
 
-                    prmsLogin.put("access_code", "gUErE32CkOPj2QGLqL97");
+                    //test
+                   /* prmsLogin.put("access_code", "gUErE32CkOPj2QGLqL97");
                     prmsLogin.put("device_id", android_id_sdk);
                     prmsLogin.put("language", "en");
                     prmsLogin.put("merchant_identifier", "UIxcLVrJ");
                     prmsLogin.put("service_command", "SDK_TOKEN");
-                    prmsLogin.put("signature", sb.toString());
+                    prmsLogin.put("signature", sb.toString());*/
 
+                    //test
+                 // json_payfory = UF.RegisterUser_payfort("https://sbpaymentservices.payfort.com/FortAPI/paymentApi", prmsLogin);
 
-                  json_payfory = UF.RegisterUser_payfort("https://sbpaymentservices.payfort.com/FortAPI/paymentApi", prmsLogin);
-                     //json_payfory = UF.RegisterUser_payfort("https://paymentservices.payfort.com/FortAPI/paymentApi", prmsLogin);
+                    //live
+                    json_payfory = UF.RegisterUser_payfort("https://paymentservices.payfort.com/FortAPI/paymentApi", prmsLogin);
+
                     Log.e("latlngJson.. prms..",  prmsLogin.toString() );
 
 
@@ -1559,7 +1567,7 @@ public class Activity_Goods_payment extends AppCompatActivity
                 g.setShowResponsePage(true);
 
                 try {
-                    FortSdk.getInstance().registerCallback(Activity_Goods_payment.this, g,FortSdk.ENVIRONMENT.TEST , 5, fortCallback, new FortInterfaces.OnTnxProcessed() {
+                    FortSdk.getInstance().registerCallback(Activity_Goods_payment.this, g,FortSdk.ENVIRONMENT.PRODUCTION , 5, fortCallback, new FortInterfaces.OnTnxProcessed() {
                         @Override
                         public void onCancel(Map<String, String> requestParamsMap, Map<String, String> responseMap) {
                             Toast.makeText(getApplicationContext(),"Payment Cancelled",Toast.LENGTH_SHORT).show();
