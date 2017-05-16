@@ -2880,7 +2880,7 @@ public class Activity_MoveMyHome extends AppCompatActivity
                 prmsLogin.put("inquiry_destionation_lng", Constants.postloaddestLong);
                 prmsLogin.put("destination_pincode", "");
                 prmsLogin.put("remarks", "");
-                prmsLogin.put("payment_mode", "");
+                prmsLogin.put("payment_mode", "o");
                 prmsLogin.put("load_inquiry_truck_type", "");
                 prmsLogin.put("created_host", android_id.toString());
                 prmsLogin.put("created_by", "");

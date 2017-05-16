@@ -23,6 +23,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.trukker.trukkershipperuae.R;
 import com.trukker.trukkershipperuae.helper.ConnectionDetector;
@@ -115,6 +116,17 @@ public class Activity_GetQuote extends AppCompatActivity
 
             if (cd.isConnectingToInternet())
             {
+                Constants.packing_chcek_s="Y";
+                Constants.promocode_store="";
+                Constants.counter_addon=0;
+                Constants.selected_Home_name.clear();
+                Constants.selected_Home_price.clear();
+                Constants.IncludeAddonService="N";
+                Constants.AddonServices="";
+                Constants.Home_store_addons_price .clear();
+                Constants.Home_store_addons_view .clear();
+                Constants.Home_store_addons_spinner .clear();
+                Constants.Home_store_addons.clear();
                 new  GetJsonmovemyhome_save().execute();
             } else {
                 UF.msg("Check your internet connection.");
@@ -125,7 +137,8 @@ public class Activity_GetQuote extends AppCompatActivity
         next.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
 
                 if (cd.isConnectingToInternet())
                 {
@@ -141,7 +154,9 @@ public class Activity_GetQuote extends AppCompatActivity
                     Constants.Home_store_addons_spinner .clear();
                     Constants.Home_store_addons.clear();
                     new  GetJsonmovemyhome_save_next().execute();
-                } else {
+                }
+                else
+                {
                     UF.msg("Check your internet connection.");
                 }
 
@@ -720,7 +735,19 @@ public class Activity_GetQuote extends AppCompatActivity
             JSONObject prmsLogin = new JSONObject();
             JSONArray jsonArray = new JSONArray();
 
-            try {
+            try
+            {
+                int requiredproce=0;
+                try
+                {
+                    requiredproce=Integer.parseInt(Constants.promocode_discountstore)+Integer.parseInt(Constants.promocode_discount_value_store);
+
+                }
+                catch (Exception e)
+                {
+
+                }
+
                 prmsLogin.put("SizeTypeCode", Constants.store_Hometypeid);
                 prmsLogin.put("Area", Constants.store_area);
                 prmsLogin.put("TotalDistance", Constants.store_placedistace);
@@ -759,7 +786,7 @@ public class Activity_GetQuote extends AppCompatActivity
                 prmsLogin.put("inquiry_destionation_lng", Constants.postloaddestLong);
                 prmsLogin.put("destination_pincode", "");
                 prmsLogin.put("remarks", "");
-                prmsLogin.put("payment_mode", "");
+                prmsLogin.put("payment_mode", "o");
                 prmsLogin.put("load_inquiry_truck_type", "");
                 prmsLogin.put("created_host", android_id.toString());
                 prmsLogin.put("created_by", "");
@@ -822,7 +849,7 @@ public class Activity_GetQuote extends AppCompatActivity
                             String totlecost_pri = array.getJSONObject(0).getString("Total_cost").toString();
                             String totlecost_stan = array.getJSONObject(1).getString("Total_cost").toString();
                             String totlecost_saving = array.getJSONObject(2).getString("Total_cost").toString();
-
+                          //  Toast.makeText(getApplicationContext(),totlecost_saving,Toast.LENGTH_LONG).show();
 
 
                             String NoOfTruck_p = array.getJSONObject(0).getString("NoOfTruck").toString();
@@ -846,7 +873,9 @@ public class Activity_GetQuote extends AppCompatActivity
                             String NoOfTruck_saving = array.getJSONObject(2).getString("NoOfTruck").toString();
                             String NoOfLabour_saving = array.getJSONObject(2).getString("NoOfLabour").toString();
                             String NoOfHandiman_saving = array.getJSONObject(2).getString("NoOfHandiman").toString();
+
                             String BaseRate_saving = array.getJSONObject(2).getString("BaseRate").toString();
+                           // Toast.makeText(getApplicationContext(),BaseRate_saving,Toast.LENGTH_LONG).show();
                             String TotalLabourRate_saving = array.getJSONObject(2).getString("TotalLabourRate").toString();
                             String TotalHandimanRate_saving = array.getJSONObject(2).getString("TotalHandimanRate").toString();
                             String TotalPackingRate_saving = array.getJSONObject(2).getString("TotalPackingRate").toString();
@@ -1016,7 +1045,7 @@ public class Activity_GetQuote extends AppCompatActivity
                 prmsLogin.put("inquiry_destionation_lng", Constants.postloaddestLong);
                 prmsLogin.put("destination_pincode", "");
                 prmsLogin.put("remarks", "");
-                prmsLogin.put("payment_mode", "");
+                prmsLogin.put("payment_mode", "o");
                 prmsLogin.put("load_inquiry_truck_type", "");
                 prmsLogin.put("created_host", android_id.toString());
                 prmsLogin.put("created_by", "");

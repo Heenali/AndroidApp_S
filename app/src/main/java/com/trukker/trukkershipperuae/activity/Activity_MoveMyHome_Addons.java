@@ -129,11 +129,19 @@ public class Activity_MoveMyHome_Addons extends AppCompatActivity
             total=total.substring(4);
            // Toast.makeText(getApplicationContext(),Constants.promocode_discount_value_store,Toast.LENGTH_LONG).show();
 
+            if(Constants.promocode_store.equalsIgnoreCase(""))
+            {
+            }
+            else
+                Constants.promocode_discountstore=total;
+
+
             if(page.equalsIgnoreCase("standard"))
             {
 
                 if(Constants.selectedIntent_getquote.equalsIgnoreCase("S"))
                     Constants.store_totalcost_s=total;
+
                 else
                     Constants.store_totalcost_saving=total;
 
@@ -195,7 +203,11 @@ public class Activity_MoveMyHome_Addons extends AppCompatActivity
                 String total=total_value.getText().toString();
                 total=total.substring(4);
 
-
+                if(Constants.promocode_store.equalsIgnoreCase(""))
+                {
+                }
+                else
+                    Constants.promocode_discountstore=total;
                 if(page.equalsIgnoreCase("standard"))
                 {
 
