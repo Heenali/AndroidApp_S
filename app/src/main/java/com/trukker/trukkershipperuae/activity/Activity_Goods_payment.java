@@ -116,6 +116,7 @@ public class Activity_Goods_payment extends AppCompatActivity
         if (keyCode == KeyEvent.KEYCODE_BACK)
         {
 
+            //go to back screen
             Constants.paymentpage_point="Y";
             Constants.page_billingname_edittext=billingname_edittext.getText().toString();
             Constants.page_vilano_edittext=vilano_edittext.getText().toString();
@@ -193,7 +194,6 @@ public class Activity_Goods_payment extends AppCompatActivity
 
                 String totlecost_stan=obj.getString("Total_cost").toString();
                 payment_mode=obj.getString("payment_mode").toString();
-                //    Toast.makeText(getApplicationContext(), payment_mode,Toast.LENGTH_SHORT).show();
 
 
 
@@ -1854,6 +1854,7 @@ public class Activity_Goods_payment extends AppCompatActivity
             return filter;
         }
     }
+    //calling authocompleted city
     public static ArrayList<String> autocomplete_so(String input) {
         ArrayList<String> resultList = null;
         HttpURLConnection conn = null;
@@ -1890,11 +1891,10 @@ public class Activity_Goods_payment extends AppCompatActivity
 
         try {
 
-            // Create a JSON object hierarchy from the results
+
             JSONObject jsonObj = new JSONObject(jsonResults.toString());
             JSONArray predsJsonArray = jsonObj.getJSONArray("predictions");
 
-            // Extract the Place descriptions from the results
             resultList = new ArrayList<String>(predsJsonArray.length());
             for (int i = 0; i < predsJsonArray.length(); i++) {
                 System.out.println(predsJsonArray.getJSONObject(i).getString("description"));
