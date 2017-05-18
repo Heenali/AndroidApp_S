@@ -127,13 +127,21 @@ public class Activity_MoveMyHome_Addons extends AppCompatActivity
             Constants.Home_store_addons_view = new ArrayList<>(store_addons_view);
             String total=total_value.getText().toString();
             total=total.substring(4);
-            // Toast.makeText(getApplicationContext(),Constants.promocode_discount_value_store,Toast.LENGTH_LONG).show();
+           // Toast.makeText(getApplicationContext(),Constants.promocode_discount_value_store,Toast.LENGTH_LONG).show();
+
+            if(Constants.promocode_store.equalsIgnoreCase(""))
+            {
+            }
+            else
+                Constants.promocode_discountstore=total;
+
 
             if(page.equalsIgnoreCase("standard"))
             {
 
                 if(Constants.selectedIntent_getquote.equalsIgnoreCase("S"))
                     Constants.store_totalcost_s=total;
+
                 else
                     Constants.store_totalcost_saving=total;
 
@@ -164,7 +172,7 @@ public class Activity_MoveMyHome_Addons extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movemyhome_addons);
         init();
-        // Toast.makeText(getApplicationContext(),Constants.promocode_store,Toast.LENGTH_LONG).show();
+       // Toast.makeText(getApplicationContext(),Constants.promocode_store,Toast.LENGTH_LONG).show();
         if(Constants.counter_addon==1)
         {
             Log.d("---------------", "--------------------------");
@@ -195,7 +203,11 @@ public class Activity_MoveMyHome_Addons extends AppCompatActivity
                 String total=total_value.getText().toString();
                 total=total.substring(4);
 
-
+                if(Constants.promocode_store.equalsIgnoreCase(""))
+                {
+                }
+                else
+                    Constants.promocode_discountstore=total;
                 if(page.equalsIgnoreCase("standard"))
                 {
 
@@ -417,7 +429,7 @@ public class Activity_MoveMyHome_Addons extends AppCompatActivity
 
                             //its get Like PT or CL
                             final String s=array.getJSONObject(aa).getString("ServiceTypeCode").toString();
-                            //  final String homename=array.getJSONObject(aa).getString("ServiceTypeDescDisplay").toString();
+                          //  final String homename=array.getJSONObject(aa).getString("ServiceTypeDescDisplay").toString();
                             name1.setText(array.getJSONObject(aa).getString("ServiceTypeDescDisplay").toString());
 
 
@@ -442,7 +454,7 @@ public class Activity_MoveMyHome_Addons extends AppCompatActivity
 
                                 hideselection.setText(s+"^"+id.get(Integer.parseInt(sel_size.getSelectedItem().toString())));
                                 store_addons_price.set(a,price.getText().toString());
-                                store_addons_spinner.set(a,id.get(Integer.parseInt(sel_size.getSelectedItem().toString())));
+                               store_addons_spinner.set(a,id.get(Integer.parseInt(sel_size.getSelectedItem().toString())));
 
                                 Log.d("store_addons_name", store_addons.toString());
                                 Log.d("store_addons_price", store_addons_price.toString());
@@ -471,73 +483,73 @@ public class Activity_MoveMyHome_Addons extends AppCompatActivity
                             }
 
 
-                            sel_size.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
-                            {
-                                @Override
-                                public void onItemSelected(AdapterView<?> arg0, View arg1,int arg2, long arg3)
+                                sel_size.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
                                 {
-
-                                    try
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> arg0, View arg1,int arg2, long arg3)
                                     {
 
-
-                                        hideselection.setText(s+"^"+id.get(arg2));
-                                        Constants.IncludeAddonService="Y";
-                                        store_addons.set(a,hideselection.getText().toString());
-
-                                        convert_atos(store_addons.toString());
-
-                                        String str_result= new GetJsonmovemyhome_save().execute().get();
-
-                                        if(str_result.equalsIgnoreCase(""))
-                                            Toast.makeText(getApplicationContext(),str_result,Toast.LENGTH_LONG).show();
-                                        else
+                                        try
                                         {
-                                            JSONObject jobj = new JSONObject(str_result);
-                                            JSONArray array=new JSONArray();
-                                            array=jobj.getJSONArray("message");
 
-                                            String NoOfTruck_s= array.getJSONObject(0).getString("Total_"+s+"_Charge").toString();
-                                            String totalvalue=array.getJSONObject(0).getString("Total_cost").toString();
-                                            String dis= array.getJSONObject(0).getString("TotalAddServiceDiscount").toString();
 
-                                            txt_discount.setText("- AED "+dis);
-                                            if(Constants.promocode_store.equalsIgnoreCase(""))
-                                            {
-                                                total_value.setText("AED "+totalvalue);
-                                            }
-                                            else
-                                            {
-                                                int val=Integer.parseInt(totalvalue)-Integer.parseInt(Constants.promocode_discount_value_store);
-                                                total_value.setText("AED "+val);
+                                                hideselection.setText(s+"^"+id.get(arg2));
+                                                Constants.IncludeAddonService="Y";
+                                                store_addons.set(a,hideselection.getText().toString());
 
-                                            }
+                                                convert_atos(store_addons.toString());
 
-                                            price.setText("AED "+NoOfTruck_s);
-                                            store_addons_price.set(a,"AED "+NoOfTruck_s);
-                                            store_addons_view.set(a,"Y");
-                                            store_addons_spinner.set(a,id.get(arg2));
-                                            Constants.selected_Home_price.set(a,NoOfTruck_s);
-                                            Log.d("store_addons_name", store_addons.toString());
-                                            Log.d("store_addons_price", store_addons_price.toString());
-                                            Log.d("store_addons_spinner", store_addons_spinner.toString());
-                                            Log.d("store_addons_view", store_addons_view.toString());
+                                                String str_result= new GetJsonmovemyhome_save().execute().get();
+
+                                                if(str_result.equalsIgnoreCase(""))
+                                                    Toast.makeText(getApplicationContext(),str_result,Toast.LENGTH_LONG).show();
+                                                else
+                                                {
+                                                    JSONObject jobj = new JSONObject(str_result);
+                                                    JSONArray array=new JSONArray();
+                                                    array=jobj.getJSONArray("message");
+
+                                                    String NoOfTruck_s= array.getJSONObject(0).getString("Total_"+s+"_Charge").toString();
+                                                    String totalvalue=array.getJSONObject(0).getString("Total_cost").toString();
+                                                    String dis= array.getJSONObject(0).getString("TotalAddServiceDiscount").toString();
+
+                                                    txt_discount.setText("- AED "+dis);
+                                                    if(Constants.promocode_store.equalsIgnoreCase(""))
+                                                    {
+                                                        total_value.setText("AED "+totalvalue);
+                                                    }
+                                                    else
+                                                    {
+                                                        int val=Integer.parseInt(totalvalue)-Integer.parseInt(Constants.promocode_discount_value_store);
+                                                        total_value.setText("AED "+val);
+
+                                                    }
+
+                                                    price.setText("AED "+NoOfTruck_s);
+                                                    store_addons_price.set(a,"AED "+NoOfTruck_s);
+                                                    store_addons_view.set(a,"Y");
+                                                    store_addons_spinner.set(a,id.get(arg2));
+                                                    Constants.selected_Home_price.set(a,NoOfTruck_s);
+                                                    Log.d("store_addons_name", store_addons.toString());
+                                                    Log.d("store_addons_price", store_addons_price.toString());
+                                                    Log.d("store_addons_spinner", store_addons_spinner.toString());
+                                                    Log.d("store_addons_view", store_addons_view.toString());
+                                                }
+
+
+
+                                        }
+                                        catch (Exception e)
+                                        {
+
                                         }
 
-
-
                                     }
-                                    catch (Exception e)
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> arg0)
                                     {
-
                                     }
-
-                                }
-                                @Override
-                                public void onNothingSelected(AdapterView<?> arg0)
-                                {
-                                }
-                            });
+                                });
 
 
                             help_layout.setOnClickListener(new View.OnClickListener()
@@ -580,10 +592,10 @@ public class Activity_MoveMyHome_Addons extends AppCompatActivity
 
 
 
-                                        if(AddonServices_static.equalsIgnoreCase(""))
-                                            Constants.IncludeAddonService="N";
-                                        else
-                                            Constants.IncludeAddonService="Y";
+                                       if(AddonServices_static.equalsIgnoreCase(""))
+                                               Constants.IncludeAddonService="N";
+                                       else
+                                               Constants.IncludeAddonService="Y";
 
                                         String str_result= null;
                                         try {
@@ -718,7 +730,7 @@ public class Activity_MoveMyHome_Addons extends AppCompatActivity
 
 
                             container_addons.addView(addView);
-                            // container_addons.setTag(addView);
+                           // container_addons.setTag(addView);
 
 
                         }
@@ -1109,7 +1121,7 @@ public class Activity_MoveMyHome_Addons extends AppCompatActivity
                                 total_value.setText("AED "+val);
 
                             }
-                            // total_value.setText("AED "+array.getJSONObject(0).getString("Total_cost").toString());
+                           // total_value.setText("AED "+array.getJSONObject(0).getString("Total_cost").toString());
                             txt_discount.setText("- AED "+dis);
                             if(dis.equalsIgnoreCase("0"))
                                 dis_layout.setVisibility(View.GONE);
@@ -1184,7 +1196,8 @@ public class Activity_MoveMyHome_Addons extends AppCompatActivity
                                     Constants.store_NoOfTruck_p=NoOfTruck_s;
                                     Constants.store_NoOfLabour_p=NoOfLabour_s;
                                     Constants.store_NoOfHandiman_p=NoOfHandiman_s;
-                                    Constants.store_BaseRate_p=BaseRate_s;
+                                    String BaseRate_s11= array.getJSONObject(0).getString("Total_cost_without_discount").toString();
+                                    Constants.store_BaseRate_p=BaseRate_s11;
                                     Constants.store_TotalLabourRate_p=TotalLabourRate_s;
                                     Constants.store_TotalHandimanRate_p=TotalHandimanRate_s;
                                     Constants.store_TotalPackingRate_p=TotalPackingRate_s;
@@ -1259,28 +1272,28 @@ public class Activity_MoveMyHome_Addons extends AppCompatActivity
         }
     }
 
-    public void convert_atos(String f)
+public void convert_atos(String f)
+{
+     f=store_addons.toString();
+    f=f.replace("*,", "").replace("*","").replace("[","").replace("]","");
+    f=f.trim();
+    if (f.length() > 0)
     {
-        f=store_addons.toString();
-        f=f.replace("*,", "").replace("*","").replace("[","").replace("]","");
-        f=f.trim();
-        if (f.length() > 0)
-        {
-            String c=f.substring(f.length() - 1);
-            if(c.contains(","))
-                f=f.substring(0, f.length() - 1);
+        String c=f.substring(f.length() - 1);
+        if(c.contains(","))
+            f=f.substring(0, f.length() - 1);
 
-        }
-        AddonServices_static=f;
-        AddonServices_static=AddonServices_static.replaceAll("\\s+","");
     }
+    AddonServices_static=f;
+    AddonServices_static=AddonServices_static.replaceAll("\\s+","");
+}
     public void remove_string(String remove_value)
     {
         if(AddonServices_static.trim().contains(remove_value.trim()+","))
         {
 
-            AddonServices_static=AddonServices_static.replace(remove_value.trim()+",","");
-            Log.e("same as ,",AddonServices_static);
+                AddonServices_static=AddonServices_static.replace(remove_value.trim()+",","");
+                Log.e("same as ,",AddonServices_static);
 
 
         }

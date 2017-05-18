@@ -101,7 +101,7 @@ public class Activity_payment extends AppCompatActivity
     StringBuffer sb = new StringBuffer();
 
     EditText vilano_edittext,streetadd_edittext,tovilano_edittext,
-            fromvilano_edittext;
+    fromvilano_edittext;
     AutoCompleteTextView fromstreetadd_edittext,tostreetadd_edittext;
     LinearLayout movingfromadd_layout, cashdelievery_layout,movingtoadd_layout,online_layout;
     String addonsvalue_price="";
@@ -226,7 +226,7 @@ public class Activity_payment extends AppCompatActivity
         sm = new SessionManager(Activity_payment.this);
         UF = new UserFunctions(Activity_payment.this);
         cd = new ConnectionDetector(Activity_payment.this);
-        // Toast.makeText(getApplicationContext(), page, Toast.LENGTH_SHORT).show();
+       // Toast.makeText(getApplicationContext(), page, Toast.LENGTH_SHORT).show();
         Constants.store_email=sm.getemailid();
         back=(TextView)findViewById(R.id.back);
         billingname_edittext=(EditText)findViewById(R.id.billingname_edittext);
@@ -341,7 +341,7 @@ public class Activity_payment extends AppCompatActivity
         }
         else
         {
-            //  Toast.makeText(getApplicationContext(),Constants.store_billing_name,Toast.LENGTH_SHORT).show();
+          //  Toast.makeText(getApplicationContext(),Constants.store_billing_name,Toast.LENGTH_SHORT).show();
             if(payment_mode.equalsIgnoreCase("C"))
             {
                 cashdelivery_sucess.setBackgroundResource(R.drawable.success);
@@ -523,8 +523,8 @@ public class Activity_payment extends AppCompatActivity
             Constants.storepayment_movingfromadd=fromadd;
 
             Constants.storepayment_paymentmode= payment_mode;
-            // Constants.storepayment_sourcevalue=icon_sourceadd_value;
-            // Constants.storepayment_destvalue=icon_destadd_value;
+           // Constants.storepayment_sourcevalue=icon_sourceadd_value;
+           // Constants.storepayment_destvalue=icon_destadd_value;
 
 
             ////payment store////
@@ -554,96 +554,96 @@ public class Activity_payment extends AppCompatActivity
                     if(two.equalsIgnoreCase(vilano_edittext.getText().toString()))
                     {
                         Isupdatebillingadd="N";
-                        //  if(three.equalsIgnoreCase(commname_edittext.getText().toString()))
-                        // {
-                        Isupdatebillingadd="N";
-                        if(four.equalsIgnoreCase(streetadd_edittext.getText().toString()))
-                        {
+                      //  if(three.equalsIgnoreCase(commname_edittext.getText().toString()))
+                       // {
                             Isupdatebillingadd="N";
-
-                            if(two_dest.equalsIgnoreCase("")||three_dest.equalsIgnoreCase("")||four_dest.equalsIgnoreCase(""))
+                            if(four.equalsIgnoreCase(streetadd_edittext.getText().toString()))
                             {
-                                Isupdatebillingadd="Y";
-                            }
-                            else
-                            {
+                                Isupdatebillingadd="N";
 
-                                if(two_dest.equalsIgnoreCase(fromvilano_edittext.getText().toString()))
+                                if(two_dest.equalsIgnoreCase("")||three_dest.equalsIgnoreCase("")||four_dest.equalsIgnoreCase(""))
                                 {
-                                    Isupdatebillingadd="N";
-                                    // if(three_dest.equalsIgnoreCase(fromcommname_edittext.getText().toString()))
-                                    // {
-                                    Isupdatebillingadd="N";
-                                    if(four_dest.equalsIgnoreCase(fromstreetadd_edittext.getText().toString()))
+                                    Isupdatebillingadd="Y";
+                                }
+                                else
+                                {
+
+                                    if(two_dest.equalsIgnoreCase(fromvilano_edittext.getText().toString()))
                                     {
                                         Isupdatebillingadd="N";
-                                        //source
-                                        ////////////////
-                                        if(two_source.equalsIgnoreCase("")||three_source.equalsIgnoreCase("")||four_source.equalsIgnoreCase(""))
-                                        {
-                                            Isupdatebillingadd="Y";
-                                        }
-                                        else
-                                        {
-
-                                            if(two_source.equalsIgnoreCase(tovilano_edittext.getText().toString()))
+                                       // if(three_dest.equalsIgnoreCase(fromcommname_edittext.getText().toString()))
+                                       // {
+                                            Isupdatebillingadd="N";
+                                            if(four_dest.equalsIgnoreCase(fromstreetadd_edittext.getText().toString()))
                                             {
                                                 Isupdatebillingadd="N";
-                                                // if(three_source.equalsIgnoreCase(tocommname_edittext.getText().toString()))
-                                                //{
-                                                Isupdatebillingadd="N";
-                                                if(four_source.equalsIgnoreCase(tostreetadd_edittext.getText().toString()))
-                                                {
-                                                    Isupdatebillingadd="N";
-                                                }
-                                                else
+                                                //source
+                                                ////////////////
+                                                if(two_source.equalsIgnoreCase("")||three_source.equalsIgnoreCase("")||four_source.equalsIgnoreCase(""))
                                                 {
                                                     Isupdatebillingadd="Y";
                                                 }
+                                                else
+                                                {
+
+                                                    if(two_source.equalsIgnoreCase(tovilano_edittext.getText().toString()))
+                                                    {
+                                                        Isupdatebillingadd="N";
+                                                       // if(three_source.equalsIgnoreCase(tocommname_edittext.getText().toString()))
+                                                        //{
+                                                            Isupdatebillingadd="N";
+                                                            if(four_source.equalsIgnoreCase(tostreetadd_edittext.getText().toString()))
+                                                            {
+                                                                Isupdatebillingadd="N";
+                                                            }
+                                                            else
+                                                            {
+                                                                Isupdatebillingadd="Y";
+                                                            }
+
+                                                        }
+                                                        else
+                                                        {
+                                                            Isupdatebillingadd="Y";
+                                                        }
+                                                   // }
+                                                    //else
+                                                  //  {
+                                                        Isupdatebillingadd="Y";
+                                                   // }
+                                                }
+                                                //////////////////
 
                                             }
                                             else
                                             {
                                                 Isupdatebillingadd="Y";
                                             }
-                                            // }
-                                            //else
-                                            //  {
-                                            Isupdatebillingadd="Y";
-                                            // }
+
                                         }
-                                        //////////////////
-
-                                    }
-                                    else
-                                    {
+                                        else
+                                        {
+                                            Isupdatebillingadd="Y";
+                                        }
+                                   // }
+                                  //  else
+                                  //  {
                                         Isupdatebillingadd="Y";
-                                    }
-
+                                  //  }
                                 }
-                                else
-                                {
-                                    Isupdatebillingadd="Y";
-                                }
-                                // }
-                                //  else
-                                //  {
-                                Isupdatebillingadd="Y";
-                                //  }
-                            }
 //---------------------------
 
-                        }
-                        else
-                        {
-                            Isupdatebillingadd="Y";
-                        }
+                            }
+                            else
+                            {
+                                Isupdatebillingadd="Y";
+                            }
 
                         //}
                         //else
-                        //  {
+                      //  {
                         //    Isupdatebillingadd="Y";
-                        //  }
+                      //  }
                     }
                     else
                     {
@@ -824,7 +824,7 @@ public class Activity_payment extends AppCompatActivity
 
                 prms.put("PostOrderParameter", jsonArray);
                 Log.e("prmsLogin", prms + "");
-                // json_save = UF.RegisterUser("postorder/SaveMovingGoodsAndHomeDetails", prms);
+               // json_save = UF.RegisterUser("postorder/SaveMovingGoodsAndHomeDetails", prms);
                 json_save = UF.RegisterUser("postorder/SaveMovingHomeDetails", prms);
 
             } catch (JSONException e) {
@@ -873,9 +873,12 @@ public class Activity_payment extends AppCompatActivity
                                 android_id_sdk = FortSdk.getDeviceId (Activity_payment.this);
                                 UF = new UserFunctions(Activity_payment.this);
                                 Log.i("signature", android_id_sdk);
-                                String text = "jgjsgcyfy6rfhkfaccess_code=gUErE32CkOPj2QGLqL97device_id="+android_id_sdk+"language=enmerchant_identifier=UIxcLVrJservice_command=SDK_TOKENjgjsgcyfy6rfhkf";
 
-                                //String text ="reqtrukker2016access_code=ZbzswidlgkuYgQhgDViYdevice_id="+android_id_sdk+"language=enmerchant_identifier=GqJmbjUhservice_command=SDK_TOKENreqtrukker2016";
+                                //test
+                                //String text = "jgjsgcyfy6rfhkfaccess_code=gUErE32CkOPj2QGLqL97device_id="+android_id_sdk+"language=enmerchant_identifier=UIxcLVrJservice_command=SDK_TOKENjgjsgcyfy6rfhkf";
+
+                                //live
+                                String text ="reqtrukker2016access_code=ZbzswidlgkuYgQhgDViYdevice_id="+android_id_sdk+"language=enmerchant_identifier=GqJmbjUhservice_command=SDK_TOKENreqtrukker2016";
 
                                 Log.e("hash key.....", text);
 
@@ -1150,7 +1153,7 @@ public class Activity_payment extends AppCompatActivity
 
         String billname_vali=billingname_edittext.getText().toString();
         String vilano_edittext_vali = vilano_edittext.getText().toString();
-        // String commname_edittext_vali = commname_edittext.getText().toString();
+       // String commname_edittext_vali = commname_edittext.getText().toString();
         String streetadd_edittext_vali = streetadd_edittext.getText().toString();
 
         String fromvilano_edittext_vali = fromvilano_edittext.getText().toString();
@@ -1296,23 +1299,28 @@ public class Activity_payment extends AppCompatActivity
                     JSONObject prms = new JSONObject();
                     JSONObject prmsLogin = new JSONObject();
 
-                  /*  prmsLogin.put("access_code", "ZbzswidlgkuYgQhgDViY");
+                    //Live
+                    prmsLogin.put("access_code", "ZbzswidlgkuYgQhgDViY");
                     prmsLogin.put("device_id", android_id_sdk);
                     prmsLogin.put("language", "en");
                     prmsLogin.put("merchant_identifier", "GqJmbjUh");
                     prmsLogin.put("service_command", "SDK_TOKEN");
-                    prmsLogin.put("signature", sb.toString());*/
+                    prmsLogin.put("signature", sb.toString());
 
 
-                    prmsLogin.put("access_code", "gUErE32CkOPj2QGLqL97");
+                    //test
+                  /*  prmsLogin.put("access_code", "gUErE32CkOPj2QGLqL97");
                     prmsLogin.put("device_id", android_id_sdk);
                     prmsLogin.put("language", "en");
                     prmsLogin.put("merchant_identifier", "UIxcLVrJ");
                     prmsLogin.put("service_command", "SDK_TOKEN");
-                    prmsLogin.put("signature", sb.toString());
+                    prmsLogin.put("signature", sb.toString());*/
 
-                    json_payfory = UF.RegisterUser_payfort("https://sbpaymentservices.payfort.com/FortAPI/paymentApi", prmsLogin);
-                    // json_payfory = UF.RegisterUser_payfort("https://paymentservices.payfort.com/FortAPI/paymentApi", prmsLogin);
+                    //test
+                   // json_payfory = UF.RegisterUser_payfort("https://sbpaymentservices.payfort.com/FortAPI/paymentApi", prmsLogin);
+
+                    //live
+                     json_payfory = UF.RegisterUser_payfort("https://paymentservices.payfort.com/FortAPI/paymentApi", prmsLogin);
 
                     Log.e("latlngJson.. prms..",  prmsLogin.toString() );
 
@@ -1329,7 +1337,7 @@ public class Activity_payment extends AppCompatActivity
             super.onPostExecute(result);
             Log.e("Result", json_payfory);
             loading.dismiss();
-            // json_payfory="{"+json_payfory+"}";
+           // json_payfory="{"+json_payfory+"}";
             try
             {
                 JSONObject jobj = new JSONObject(json_payfory);
@@ -1356,13 +1364,13 @@ public class Activity_payment extends AppCompatActivity
 
                 try
                 {
-                    FortSdk.getInstance().registerCallback(Activity_payment.this, g,FortSdk.ENVIRONMENT.TEST , 5, fortCallback, new FortInterfaces.OnTnxProcessed() {
+                    FortSdk.getInstance().registerCallback(Activity_payment.this, g,FortSdk.ENVIRONMENT.PRODUCTION , 5, fortCallback, new FortInterfaces.OnTnxProcessed() {
                         @Override
                         public void onCancel(Map<String, String> requestParamsMap, Map<String, String> responseMap) {
                             Toast.makeText(getApplicationContext(),"Payment Cancelled",Toast.LENGTH_SHORT).show();
                             android_id_sdk="";
 
-                            // finish();
+                           // finish();
 
                         }
 
@@ -1505,7 +1513,7 @@ public class Activity_payment extends AppCompatActivity
                         Log.e("dddddd",no);
                         Log.e("dddddd","postorder/GetDraftOrderDetails?shipperid="+sm.getUniqueId()+"&inqno="+no);
 
-                        //calling draft api******
+                       //calling draft api******
                         if (cd.isConnectingToInternet())
                         {
                             SyncMethod(UserFunctions.URL+"postorder/GetDraftOrderDetails?shipperid="+sm.getUniqueId()+"&inqno="+no);
@@ -1614,7 +1622,7 @@ public class Activity_payment extends AppCompatActivity
                             Constants.IncludeAddonService=array.getJSONObject(0).getString("IncludeAddonService").toString();
                             if(Constants.IncludeAddonService.equalsIgnoreCase("Y"))
                             {
-                                // Constants.AddonServices=array.getJSONObject(0).getString("AddonServices").toString();
+                               // Constants.AddonServices=array.getJSONObject(0).getString("AddonServices").toString();
                                 Constants.counter_addon=1;
                                 Log.e("ggggg",ServiceTypeCode.size()+"");
                                 for(int b=0;b<ServiceTypeCode.size();b++)
@@ -1825,7 +1833,8 @@ public class Activity_payment extends AppCompatActivity
                                 Constants.store_NoOfTruck_p=NoOfTruck_s;
                                 Constants.store_NoOfLabour_p=NoOfLabour_s;
                                 Constants.store_NoOfHandiman_p=NoOfHandiman_s;
-                                Constants.store_BaseRate_p=BaseRate_s;
+                                String Total_cost_without_discount= array.getJSONObject(0).getString("Total_cost_without_discount").toString();
+                                Constants.store_BaseRate_p=Total_cost_without_discount;
                                 Constants.store_TotalLabourRate_p=TotalLabourRate_s;
                                 Constants.store_TotalHandimanRate_p=TotalHandimanRate_s;
                                 Constants.store_TotalPackingRate_p=TotalPackingRate_s;
