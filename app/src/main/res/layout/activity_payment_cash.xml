@@ -60,8 +60,8 @@
                         android:layout_height="wrap_content"
                         android:text="we are going to be there to help you move to your new house soon !"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:textSize="20dp"
+
+                        android:textSize="18dp"
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"
                         android:gravity="center"
@@ -71,31 +71,6 @@
                         android:layout_toEndOf="@+id/hometype_icon" />
 
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/clicktitle_layout"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:orientation="horizontal">
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Make sure to fill in details of your moving contents so everything’s perfect on the day of your move. Click HERE"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        android:paddingLeft="20dp"
-                        android:paddingRight="20dp"
-                        android:gravity="center"
-                        android:id="@+id/clicktext"
-                        android:layout_toRightOf="@+id/hometype_icon"
-                        android:layout_toEndOf="@+id/hometype_icon" />
-
-                </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -103,7 +78,7 @@
                     android:id="@+id/id_layout"
                     android:paddingBottom="10dp"
                     android:gravity="center"
-                   android:paddingTop="10dp"
+                    android:paddingTop="10dp"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -130,6 +105,31 @@
                         android:layout_toEndOf="@+id/hometype_icon" />
 
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/clicktitle_layout"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Make sure to fill in details of your moving contents so everything’s perfect on the day of your move. Click HERE"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:gravity="center"
+                        android:id="@+id/clicktext"
+                        android:layout_toRightOf="@+id/hometype_icon"
+                        android:layout_toEndOf="@+id/hometype_icon" />
+
+                </LinearLayout>
+
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -160,7 +160,7 @@
                     android:background="@drawable/round_corner_bg"
                     android:id="@+id/housepaint_layout"
                     android:paddingBottom="10dp"
-
+android:visibility="gone"
                     android:paddingLeft="20dp"
                     android:orientation="horizontal">
 
@@ -197,6 +197,7 @@
                     android:background="@drawable/round_corner_bg"
                     android:id="@+id/houseclean_layout"
                     android:paddingBottom="10dp"
+                    android:visibility="gone"
                     android:paddingLeft="20dp"
                     android:orientation="horizontal">
 
@@ -233,6 +234,7 @@
                     android:background="@drawable/round_corner_bg"
                     android:id="@+id/controlservices_layout"
                     android:paddingBottom="10dp"
+                    android:visibility="gone"
                     android:paddingLeft="20dp"
                     android:orientation="horizontal">
 
@@ -269,6 +271,7 @@
                     android:background="@drawable/round_corner_bg"
                     android:id="@+id/extraservices_layout"
                     android:paddingBottom="10dp"
+
                     android:paddingLeft="20dp"
                     android:orientation="horizontal">
 
@@ -302,6 +305,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:weightSum="1"
+                    android:layout_marginTop="50dp"
                     android:paddingTop="20dp"
                     android:layout_weight="0.10"
                     android:orientation="horizontal"

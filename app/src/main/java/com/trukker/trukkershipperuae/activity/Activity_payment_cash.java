@@ -50,7 +50,7 @@ public class Activity_payment_cash extends AppCompatActivity
     UserFunctions UF;
     SessionManager sm;
     ConnectionDetector cd;
-    String json_mess="Mooving Goods";
+    String json_mess="";
     String page;
     TextView clicktext,order_id;
     LinearLayout housepaint_layout,houseclean_layout,controlservices_layout,extraservices_layout;
@@ -126,15 +126,20 @@ public class Activity_payment_cash extends AppCompatActivity
                     if (oldhouse_value.equalsIgnoreCase("N") && newhouse_value.equalsIgnoreCase("N") && extraservices_value.equalsIgnoreCase("N") && pestservices_value.equalsIgnoreCase("N")) {
                         Toast.makeText(getApplicationContext(), "Please Select option", Toast.LENGTH_SHORT).show();
 
-                    } else {
-                        if (oldhouse_value.equalsIgnoreCase("N")) {
+                    } else
+                    {
+                        if (oldhouse_value.equalsIgnoreCase("N"))
+                        {
                             json_mess = json_mess;
-                        } else {
+                        } else
+                        {
                             json_mess = json_mess + ",Painting";
                         }
-                        if (newhouse_value.equalsIgnoreCase("N")) {
+                        if (newhouse_value.equalsIgnoreCase("N"))
+                        {
                             json_mess = json_mess;
-                        } else {
+                        } else
+                        {
                             json_mess = json_mess + ",Cleaning";
                         }
 
@@ -147,7 +152,7 @@ public class Activity_payment_cash extends AppCompatActivity
                         if (extraservices_value.equalsIgnoreCase("N")) {
 
                         } else {
-                            json_mess = json_mess + ",Extra Storage";
+                            json_mess = json_mess + "Extra Storage";
                         }
 
 
