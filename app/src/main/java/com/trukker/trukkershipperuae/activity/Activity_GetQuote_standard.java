@@ -1242,15 +1242,9 @@ else if(Constants.selectedIntent_getquote.equalsIgnoreCase("SAVINGS"))
 
         f=f.replace("*,", "").replace("*","").replace("[","").replace("]","");
         f=f.trim();
-        if (f.length() > 0)
-        {
-            String c=f.substring(f.length() - 1);
-            if(c.contains(","))
-                f=f.substring(0, f.length() - 1);
-
+        if (f.endsWith(",")) {
+            f = f.substring(0, f.length() - 1);
         }
-
-        f=f.replaceAll("\\s+","");
         return f;
     }
 

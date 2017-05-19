@@ -546,8 +546,8 @@
                         android:textColor="#000000"
                         android:gravity="left"
                         android:paddingRight="5dp"
-                        android:textStyle="bold"
-                        android:textSize="14dp"
+
+                        android:textSize="15dp"
                         android:text="add ons services name dxsada a svavcs avav"
                         android:layout_weight=".70"/>
 
@@ -559,7 +559,7 @@
                         android:ellipsize="end"
                         android:singleLine="true"
                         android:textColor="@color/black"
-                        android:gravity="left"
+                        android:gravity="center"
                         android:text="AED 0 "
                         android:textSize="15dp"
                         android:layout_weight="0.30"/>
@@ -572,7 +572,7 @@
                     android:layout_height="0dp"
                     android:weightSum="1"
                     android:paddingBottom="10dp"
-                    android:paddingTop="15dp"
+                    android:paddingTop="5dp"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:layout_weight="0.10"
@@ -586,13 +586,13 @@
                         android:layout_height="match_parent"
                         android:ellipsize="end"
                         android:singleLine="true"
-                        android:textAllCaps="true"
+
                         android:textColor="#000000"
                         android:gravity="left"
-                        android:textStyle="bold"
+
                         android:textSize="15dp"
-                        android:text="SERVICE DISCOUNT"
-                        android:layout_weight=".50"/>
+                        android:text="Service Discount"
+                        android:layout_weight=".70"/>
 
 
                     <TextView
@@ -602,10 +602,10 @@
                         android:ellipsize="end"
                         android:singleLine="true"
                         android:textColor="@color/black"
-                        android:gravity="left"
+                        android:gravity="center"
                         android:text="AED 200 "
                         android:textSize="15dp"
-                        android:layout_weight="0.50"/>
+                        android:layout_weight="0.30"/>
 
 
                 </LinearLayout>
@@ -637,7 +637,7 @@
                      android:textStyle="bold"
                     android:textSize="15dp"
                     android:text="Total Quote"
-                    android:layout_weight=".50"/>
+                    android:layout_weight=".70"/>
 
 
                 <TextView
@@ -648,13 +648,14 @@
                     android:ellipsize="end"
                     android:singleLine="true"
                     android:textColor="@color/black"
-                    android:gravity="left"
+                    android:gravity="center"
                     android:text="AED 200 "
                     android:textSize="15dp"
-                    android:layout_weight="0.50"/>
+                    android:layout_weight="0.30"/>
 
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -681,7 +682,7 @@
                     android:textStyle="bold"
                     android:textSize="15dp"
                     android:text="Total Quote"
-                    android:layout_weight=".50"/>
+                    android:layout_weight=".70"/>
 
 
                 <TextView
@@ -691,10 +692,10 @@
                     android:ellipsize="end"
                     android:singleLine="true"
                     android:textColor="@color/black"
-                    android:gravity="left"
+                    android:gravity="center"
                     android:text="AED 200 "
                     android:textSize="15dp"
-                    android:layout_weight="0.50"/>
+                    android:layout_weight="0.30"/>
 
 
 

@@ -336,6 +336,7 @@ public class Activity_GetQuote_premium extends AppCompatActivity
 
 
                 }
+
                 String name=convert_atos(Constants.selected_Home_name.toString());
                 addons_title.setText(name);
 
@@ -933,7 +934,8 @@ public class Activity_GetQuote_premium extends AppCompatActivity
 
             total_layout.setVisibility(View.GONE);
             total_layout_promp.setVisibility(View.VISIBLE);
-            total_value_promp.setText(String.valueOf(Constants.promocode_discountstore));
+
+            total_value_promp.setText(String.valueOf("AED " + Constants.promocode_discountstore));
             discount.setText("-" + Constants.promocode_discount_value_store);
             promocode_value.setText(Constants.promocode_store);
             applay_btn.setEnabled(false);
@@ -956,15 +958,9 @@ public class Activity_GetQuote_premium extends AppCompatActivity
 
         f=f.replace("*,", "").replace("*","").replace("[","").replace("]","");
         f=f.trim();
-        if (f.length() > 0)
-        {
-            String c=f.substring(f.length() - 1);
-            if(c.contains(","))
-                f=f.substring(0, f.length() - 1);
-
+        if (f.endsWith(",")) {
+            f = f.substring(0, f.length() - 1);
         }
-
-        f=f.replaceAll("\\s+","");
         return f;
     }
 

@@ -24,7 +24,7 @@
             android:paddingBottom="10dp"
             android:singleLine="true"
             android:gravity="left|center"
-            android:textColor="@color/original_black"
+            android:textColor="@color/gray"
             android:textSize="14sp"
             android:textStyle="bold"
             android:text="Total Amount"

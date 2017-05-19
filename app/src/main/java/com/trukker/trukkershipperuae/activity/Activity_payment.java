@@ -2224,6 +2224,9 @@ public class Activity_payment extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow( savedraft_btn.getWindowToken(),
+                        InputMethodManager.RESULT_UNCHANGED_SHOWN);
                 if (!validate())
                 {
                     onSignupFailed();

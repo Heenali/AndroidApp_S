@@ -241,7 +241,7 @@
                     android:textStyle="bold"
                     android:textSize="15dp"
                     android:text="COMBO DISCOUNT"
-                    android:layout_weight=".50"/>
+                    android:layout_weight=".70"/>
 
 
                 <TextView
@@ -251,10 +251,10 @@
                     android:ellipsize="end"
                     android:singleLine="true"
                     android:textColor="@color/black"
-                    android:gravity="left"
+                    android:gravity="center"
                     android:text="- AED 00 "
                     android:textSize="15dp"
-                    android:layout_weight="0.50"/>
+                    android:layout_weight="0.30"/>
 
 
             </LinearLayout>
@@ -282,7 +282,7 @@
                     android:textStyle="bold"
                     android:textSize="15dp"
                     android:text="Total Quote"
-                    android:layout_weight=".50"/>
+                    android:layout_weight=".70"/>
 
 
                 <TextView
@@ -293,11 +293,11 @@
                     android:ellipsize="end"
                     android:singleLine="true"
                     android:textColor="@color/black"
-                    android:gravity="left"
+                    android:gravity="center"
                     android:text="AED 200 "
                     android:textSize="15dp"
 
-                    android:layout_weight="0.50"/>
+                    android:layout_weight="0.30"/>
 
 
             </LinearLayout>
