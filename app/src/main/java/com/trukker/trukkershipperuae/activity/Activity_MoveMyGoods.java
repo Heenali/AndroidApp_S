@@ -481,7 +481,7 @@ public class Activity_MoveMyGoods extends AppCompatActivity
         UF = new UserFunctions(Activity_MoveMyGoods.this);
         cd = new ConnectionDetector(Activity_MoveMyGoods.this);
         Activity_title = (TextView) findViewById(R.id.title);
-        Activity_title.setText("Move My Goods");
+        Activity_title.setText("Details");
         hometype_icon = (ImageView) findViewById(R.id.hometype_icon);
         hometype_icon.setBackgroundResource(R.drawable.trucktype);
         goodsdetail_layout = (RelativeLayout) findViewById(R.id.goodsdetail_layout);

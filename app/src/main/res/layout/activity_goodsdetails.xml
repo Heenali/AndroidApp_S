@@ -24,7 +24,7 @@
             android:layout_centerVertical="true"
             android:textSize="17dp"
             android:textColor="@color/white"
-            android:text="Move Goods" />
+            android:text="Location" />
 
         <ImageView
 

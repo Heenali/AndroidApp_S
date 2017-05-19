@@ -78,6 +78,7 @@ public class Activity_HireQuote extends AppCompatActivity
     TextView nolabour_value,nohandyman_value,nopacking_value;
     TextView nooftruck_edittext,nolabour_edittext,nohandyman_edittext;
     Button submit;
+    TextView title_main;
     ToggleButton tc_condition;
     TextView tc_title;
     ToggleButton nopacking_sucess;
@@ -502,7 +503,8 @@ public class Activity_HireQuote extends AppCompatActivity
         noofdays_layout.setVisibility(View.VISIBLE);
         LinearLayout servicedis_layout=(LinearLayout)findViewById(R.id.servicedis_layout);
         servicedis_layout.setVisibility(View.GONE);
-
+        title_main=(TextView)findViewById(R.id.title_texth);
+        title_main.setText("Estimate");
         title_text_noofdays=(TextView)findViewById(R.id.title_text);
         title_text_noofdays.setText("No.of Days "+Constants.store_noofdays);
         hometype_layout=(LinearLayout)findViewById(R.id.hometype_layout);

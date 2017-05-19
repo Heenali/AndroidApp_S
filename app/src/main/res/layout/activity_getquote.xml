@@ -23,7 +23,7 @@
             android:layout_centerVertical="true"
             android:textSize="17dp"
             android:textColor="@color/white"
-            android:text="Order Type" />
+            android:text="Estimate" />
 
         <TextView
             android:layout_width="80dp"
@@ -87,7 +87,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="New Text"
+                android:text="0000"
                 android:paddingTop="68dp"
                 android:textSize="18dp"
                 android:gravity="center"
@@ -145,7 +145,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="New Text"
+                android:text="0000"
                 android:paddingTop="68dp"
                 android:gravity="center"
                 android:textSize="18dp"

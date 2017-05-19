@@ -22,7 +22,7 @@
             android:layout_centerVertical="true"
             android:textSize="17dp"
             android:textColor="@color/white"
-            android:text="Location Details" />
+            android:text="Confirmation" />
 
         <ImageView
 
@@ -256,7 +256,7 @@
                         android:textColor="@color/black"
                         android:background="@drawable/round_edittext"
                         android:textSize="15dp"
-                        android:hint="Apartment/Villa No"
+                        android:hint="Apartment No./Unit No./Building Name/Street Name"
                         android:gravity="start"
                         />
 
@@ -389,7 +389,7 @@
                         android:textColor="@color/black"
                         android:background="@drawable/round_edittext"
                         android:textSize="15dp"
-                        android:hint="Apartment/Villa No"
+                        android:hint="Apartment No./Unit No./Building Name/Street Name"
                         android:gravity="start"
                         />
 

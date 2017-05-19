@@ -570,9 +570,11 @@ public class Activity_MoveMyHome extends AppCompatActivity
             //locationTv.setText("Latitude:" + latitude + ", Longitude:" + longitude);
 
 
-            arae_edittext.setOnTouchListener(new View.OnTouchListener() {
+            arae_edittext.setOnTouchListener(new View.OnTouchListener()
+            {
                 @Override
-                public boolean onTouch(View v, MotionEvent event) {
+                public boolean onTouch(View v, MotionEvent event)
+                {
                     arae_edittext.setCursorVisible(true);
                     return false;
 

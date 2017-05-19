@@ -668,7 +668,7 @@ public class Activity_Goods_payment extends AppCompatActivity
         goodsw_edittext=(EditText)findViewById(R.id.goodsw_edittext);
         goodswunit_edittext=(Spinner)findViewById(R.id.goodswunit_edittext);
 
-        title_page.setText("Location Details");
+       // title_page.setText("Location Details");
         goods_edittext=(EditText)findViewById(R.id.goodsdetails_edittext);
         billingname_edittext=(EditText)findViewById(R.id.billingname_edittext);
         vilano_edittext=(EditText)findViewById(R.id.vilano_edittext);
