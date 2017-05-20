@@ -96,7 +96,7 @@ public class Activity_payment extends AppCompatActivity
     LinearLayout goodsdetails_layout;
     String android_id_sdk;
     String json_payfory;
-
+    ProgressDialog  loading;
     private FortCallBackManager fortCallback  = null;
     StringBuffer sb = new StringBuffer();
 
@@ -120,40 +120,48 @@ public class Activity_payment extends AppCompatActivity
     {
         if (keyCode == KeyEvent.KEYCODE_BACK)
         {
-            Constants.counter=3;
-            Constants.paymentpage_point="Y";
-            Constants.page_billingname_edittext=billingname_edittext.getText().toString();
-            Constants.page_vilano_edittext=vilano_edittext.getText().toString();
-
-            Constants.page_streetadd_edittext=streetadd_edittext.getText().toString();
-            Constants.page_fromvilano_edittext=fromvilano_edittext.getText().toString();
-
-            Constants.page_fromstreetadd_edittext=fromstreetadd_edittext.getText().toString();
-            Constants.page_tovilano_edittext=tovilano_edittext.getText().toString();
-
-            Constants.page_tostreetadd_edittext=tostreetadd_edittext.getText().toString();
-            Constants.page_movingfromadd_layout_value=movingfromadd_layout_value;
-            Constants.page_movingtoadd_layout_value=movingtoadd_layout_value;
-            Constants.page_cashdelievery_layout_value=cashdelievery_layout_value;
-
-            if(page.equalsIgnoreCase("standard") ||page.equalsIgnoreCase("SAVINGS"))
+            try
             {
-                Intent i = new Intent(Activity_payment.this,Activity_MoveMyHome_Addons.class);
-                i.putExtra("page", "standard");
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(i);
-                overridePendingTransition(R.anim.left_in, R.anim.right_out);
-                finish();
+                Constants.counter=3;
+                Constants.paymentpage_point="Y";
+                Constants.page_billingname_edittext=billingname_edittext.getText().toString();
+                Constants.page_vilano_edittext=vilano_edittext.getText().toString();
+
+                Constants.page_streetadd_edittext=streetadd_edittext.getText().toString();
+                Constants.page_fromvilano_edittext=fromvilano_edittext.getText().toString();
+
+                Constants.page_fromstreetadd_edittext=fromstreetadd_edittext.getText().toString();
+                Constants.page_tovilano_edittext=tovilano_edittext.getText().toString();
+
+                Constants.page_tostreetadd_edittext=tostreetadd_edittext.getText().toString();
+                Constants.page_movingfromadd_layout_value=movingfromadd_layout_value;
+                Constants.page_movingtoadd_layout_value=movingtoadd_layout_value;
+                Constants.page_cashdelievery_layout_value=cashdelievery_layout_value;
+
+                if(page.equalsIgnoreCase("standard") ||page.equalsIgnoreCase("SAVINGS"))
+                {
+                    Intent i = new Intent(Activity_payment.this,Activity_MoveMyHome_Addons.class);
+                    i.putExtra("page", "standard");
+                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(i);
+                    overridePendingTransition(R.anim.left_in, R.anim.right_out);
+                    finish();
+                }
+                if(page.equalsIgnoreCase("premium"))
+                {
+                    Intent i = new Intent(Activity_payment.this,Activity_MoveMyHome_Addons.class);
+                    i.putExtra("page", "premium");
+                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(i);
+                    overridePendingTransition(R.anim.left_in, R.anim.right_out);
+                    finish();
+                }
             }
-            if(page.equalsIgnoreCase("premium"))
+            catch (Exception e)
             {
-                Intent i = new Intent(Activity_payment.this,Activity_MoveMyHome_Addons.class);
-                i.putExtra("page", "premium");
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(i);
-                overridePendingTransition(R.anim.left_in, R.anim.right_out);
-                finish();
+
             }
+
         }
         return super.onKeyDown(keyCode, event);
     }
@@ -175,6 +183,12 @@ public class Activity_payment extends AppCompatActivity
 
                 try
                 {
+                    loading = new ProgressDialog(Activity_payment.this);
+                    loading.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+                    loading.setIndeterminate(true);
+                    loading.setCancelable(true);
+                    loading.show();
+                    loading.setContentView(R.layout.my_progress);
                     String url = UserFunctions.URL + "admin/GetAllServices?opt=P";
                     SyncMethod_addons_list(url);
 
@@ -1476,7 +1490,7 @@ public class Activity_payment extends AppCompatActivity
                     try
                     {
                         String aResponse = msg.getData().getString("message");
-
+                        loading.cancel();
 
                         aResponse = aResponse.trim();
                         aResponse= new JSONTokener(aResponse).nextValue().toString();
@@ -1833,7 +1847,7 @@ public class Activity_payment extends AppCompatActivity
                                 Constants.store_NoOfTruck_p=NoOfTruck_s;
                                 Constants.store_NoOfLabour_p=NoOfLabour_s;
                                 Constants.store_NoOfHandiman_p=NoOfHandiman_s;
-                                String Total_cost_without_discount= array.getJSONObject(0).getString("Total_cost_without_discount").toString();
+                                String Total_cost_without_discount= array.getJSONObject(0).getString("BaseRate").toString();
                                 Constants.store_BaseRate_p=Total_cost_without_discount;
                                 Constants.store_TotalLabourRate_p=TotalLabourRate_s;
                                 Constants.store_TotalHandimanRate_p=TotalHandimanRate_s;
