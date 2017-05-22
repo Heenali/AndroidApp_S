@@ -25,6 +25,7 @@
             android:text="Other Services" />
 
     </RelativeLayout>
+
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -143,17 +144,43 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="We can make your move much more convenient everything&apos;s perfect on the day of your move"
+                        android:text="(We know how busy you are so you may send it back to us up  until 2 days before your schedule.)"
                         android:textColor="@color/black"
-                        android:textSize="15dp"
+                        android:textSize="12dp"
                         android:paddingLeft="20dp"
-                        android:gravity="left"
+                        android:gravity="center"
                         android:paddingRight="20dp"
                         android:id="@+id/billing_title1"
                         android:layout_toRightOf="@+id/hometype_icon"
                         android:layout_toEndOf="@+id/hometype_icon" />
 
                 </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:paddingTop="10dp"
+                    android:paddingBottom="20dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Interested in availing some of other services?"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:paddingLeft="20dp"
+                        android:gravity="left"
+                        android:paddingRight="20dp"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@+id/hometype_icon"
+                        android:layout_toEndOf="@+id/hometype_icon" />
+
+                </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -292,8 +319,8 @@ android:visibility="gone"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=" Get Extra Storage"
-                        android:textColor="#000000"
-                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
                         android:paddingLeft="5dp"
                         android:layout_marginLeft="5dp"
                         android:id="@+id/online_title"
