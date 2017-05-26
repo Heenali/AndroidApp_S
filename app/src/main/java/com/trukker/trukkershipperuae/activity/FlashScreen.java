@@ -4,6 +4,7 @@ package com.trukker.trukkershipperuae.activity;
  * Created by admin on 8/29/2016.
  */
 
+import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -12,6 +13,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
 import android.util.Log;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.trukker.trukkershipperuae.R;
 import com.trukker.trukkershipperuae.helper.Constants;
@@ -24,6 +30,8 @@ public class FlashScreen extends Activity
     protected int _splashTime = 5000;
     //SessionManager session;
      String role_id;
+    TextView animation_text,animation_text1;
+    ImageView splashLogo;
     // UserFunctions UF;
     // DataBaseHelper db;
 
@@ -33,6 +41,23 @@ public class FlashScreen extends Activity
         super.onCreate(savedInstanceState);
        // Fabric.with(this, new Crashlytics());
         setContentView(R.layout.splashscreen);
+        animation_text=(TextView)findViewById(R.id.animation_text);
+        animation_text1=(TextView)findViewById(R.id.animation_text1);
+        splashLogo=(ImageView)findViewById(R.id.splashLogo);
+        Animation animFadeIn = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.bouns);
+        Animation animFadeIn1 = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.cycle_7);
+        animation_text.startAnimation(animFadeIn);
+        animation_text1.startAnimation(animFadeIn);
+      // splashLogo.startAnimation(animFadeIn1);
+
+
+        ObjectAnimator animation = ObjectAnimator.ofFloat(splashLogo, "rotationY", 0.0f, 360f);
+        animation.setDuration(5600);
+        animation.setRepeatCount(ObjectAnimator.INFINITE);
+        animation.setInterpolator(new AccelerateDecelerateInterpolator());
+        animation.start();
         //////////////////////////////////////////////////////
         initValue();
 

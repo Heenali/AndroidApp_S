@@ -21,6 +21,6 @@
     <style name="Theme.MyAppTheme" parent="Theme">
     <item name="android:windowNoTitle">true</item>
     <item name="android:windowContentOverlay">@null</item>
-    <item name="android:windowBackground">@drawable/flash_screen</item>
+    <item name="android:windowBackground">@drawable/side_nav_bar</item>
     </style>
 </resources>
