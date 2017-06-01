@@ -46,8 +46,7 @@ public class FlashScreen extends Activity
         splashLogo=(ImageView)findViewById(R.id.splashLogo);
         Animation animFadeIn = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.bouns);
-        Animation animFadeIn1 = AnimationUtils.loadAnimation(getApplicationContext(),
-                R.anim.cycle_7);
+
         animation_text.startAnimation(animFadeIn);
         animation_text1.startAnimation(animFadeIn);
       // splashLogo.startAnimation(animFadeIn1);
