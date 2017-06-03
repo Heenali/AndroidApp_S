@@ -215,16 +215,16 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
         }
 
         if(driver_photo.equalsIgnoreCase(""))
-        {
-            driver_image_iv.setBackgroundResource(R.drawable.ic_profile);
-        }
-        else
-        {
-            UrlImageViewHelper.setUrlDrawable(driver_image_iv, UserFunctions.URLIMG.toString()+ driver_photo.toString(), R.drawable.ic_profile);
+    {
+        driver_image_iv.setBackgroundResource(R.drawable.ic_profile);
+    }
+    else
+    {
+        UrlImageViewHelper.setUrlDrawable(driver_image_iv, UserFunctions.URLIMG.toString()+ driver_photo.toString(), R.drawable.ic_profile);
 
-            //Toast.makeText(getApplicationContext(),UserFunctions.URLIMG.toString()+ driver_photo,Toast.LENGTH_SHORT).show();
-           // Picasso.with(getApplicationContext()).load(UserFunctions.URLIMG.toString()+ driver_photo).into(driver_image_iv);
-        }
+        //Toast.makeText(getApplicationContext(),UserFunctions.URLIMG.toString()+ driver_photo,Toast.LENGTH_SHORT).show();
+        // Picasso.with(getApplicationContext()).load(UserFunctions.URLIMG.toString()+ driver_photo).into(driver_image_iv);
+    }
         cancleorder_submit_orange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
