@@ -177,15 +177,15 @@
                 <android.support.v7.widget.CardView
                     xmlns:card_view="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/hire"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".40"
+                    android:layout_margin="10dp"
                     android:layout_centerInParent="true"
                     card_view:cardCornerRadius="16dp"
                     card_view:cardElevation="6dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".40"
                     card_view:contentPadding="5dp"
-                    android:layout_margin="1dp"
-                    card_view:cardBackgroundColor="@android:color/white" >
+                    card_view:cardBackgroundColor="@color/cardvblue" >
 
                     <LinearLayout
                         android:layout_width="fill_parent"
@@ -222,6 +222,49 @@
 
                 </android.support.v7.widget.CardView>
 
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/delivery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="10dp"
+                    android:layout_weight=".40"
+                    card_view:cardBackgroundColor="@color/white"
+                    card_view:cardCornerRadius="16dp"
+                    card_view:cardElevation="6dp"
+                    card_view:contentPadding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/delivery_image"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/itemdelivery" />
+
+                        <TextView
+                            android:id="@+id/delivery_title"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:paddingTop="10dp"
+                            android:singleLine="true"
+                            android:text="Item Delivery"
+                            android:textAllCaps="true"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#000000"
+                            android:textSize="11dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
 
 
             </LinearLayout>

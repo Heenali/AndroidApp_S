@@ -34,9 +34,11 @@ import com.trukker.trukkershipperuae.activity.Activity_GetQuote;
 import com.trukker.trukkershipperuae.activity.Activity_GoodsQuote;
 import com.trukker.trukkershipperuae.activity.Activity_HireQuote;
 import com.trukker.trukkershipperuae.activity.Activity_HireTruck;
+import com.trukker.trukkershipperuae.activity.Activity_IteamDelivery;
 import com.trukker.trukkershipperuae.activity.Activity_MoveMyGoods;
 import com.trukker.trukkershipperuae.activity.Activity_MoveMyHome;
 import com.trukker.trukkershipperuae.activity.Activity_paintingselection;
+import com.trukker.trukkershipperuae.activity.Dashbord_Delivery;
 import com.trukker.trukkershipperuae.activity.MainActivity;
 import com.trukker.trukkershipperuae.helper.ConnectionDetector;
 import com.trukker.trukkershipperuae.helper.Constants;
@@ -60,7 +62,7 @@ import static java.lang.System.exit;
 
 public class Fragment_Dashboard extends Fragment
 { CardView movehome_btn;
-    CardView painting,cleaning,other,pest,moving_hireturck;
+    CardView painting,cleaning,other,pest,moving_hireturck,itemdelivery;
     String jsonGcm1;
     UserFunctions UF;
     SessionManager sm;
@@ -196,6 +198,36 @@ public class Fragment_Dashboard extends Fragment
             }
         });
 
+        itemdelivery.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+
+                Constants.Draft="N";
+                Intent i = new Intent(getActivity().getApplicationContext(), Activity_IteamDelivery.class);
+                startActivity(i);
+                getActivity().overridePendingTransition(R.anim.right_in, R.anim.left_out);
+
+
+            }
+        });
+
+        moving_hireturck.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+
+                Constants.Draft="N";
+                Intent i = new Intent(getActivity().getApplicationContext(), Activity_HireTruck.class);
+                startActivity(i);
+                getActivity().overridePendingTransition(R.anim.right_in, R.anim.left_out);
+                getActivity().finish();
+
+            }
+        });
+
         movehome_btn.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -290,6 +322,7 @@ public class Fragment_Dashboard extends Fragment
         imei_num = mngr.getDeviceId();
         moving_hireturck=(CardView)rootView.findViewById(R.id.hire);
         movehome_btn=(CardView)rootView.findViewById(R.id.homess);
+        itemdelivery=(CardView)rootView.findViewById(R.id.delivery);
         painting=(CardView)rootView.findViewById(R.id.painting);
         cleaning=(CardView)rootView.findViewById(R.id.cleaning);
         other=(CardView)rootView.findViewById(R.id.other);

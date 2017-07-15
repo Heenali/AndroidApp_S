@@ -166,7 +166,8 @@ public class Activity_MoveMyHome extends AppCompatActivity
     private static final String API_KEY = "AIzaSyD_Hvp-mAjMMMS_OgPFEIxqX-AsffaYK0E";
 
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             Constants.storemail_send = "0";
             Intent i = new Intent(Activity_MoveMyHome.this, MainActivity.class);
@@ -406,7 +407,8 @@ public class Activity_MoveMyHome extends AppCompatActivity
         form_open.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 form.setVisibility(View.VISIBLE);
                 form_open.setVisibility(View.GONE);
                 Animation anm = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_up2);

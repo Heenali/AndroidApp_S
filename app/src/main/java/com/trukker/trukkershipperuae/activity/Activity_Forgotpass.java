@@ -82,7 +82,8 @@ public class Activity_Forgotpass extends AppCompatActivity
         assert indicator != null;
         indicator.setViewPager(pager, true);
         pager.beginFakeDrag();
-        if (Constants.forgot_point == 0) {
+        if (Constants.forgot_point == 0)
+        {
             indicator.setCurrentStep(1);
         }
         if (Constants.forgot_point == 1) {

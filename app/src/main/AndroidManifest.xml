@@ -175,6 +175,11 @@
             android:theme="@style/MyMaterialTheme" />
 
         <activity
+            android:name=".activity.Activity_IteamDelivery"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
             android:name=".activity.Dialog_postlodedetail"/>
 
         <activity

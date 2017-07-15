@@ -26,7 +26,7 @@ public class UserFunctions
 	//public static String URLIMG=  "http://trukker.ae/trukkerUAEApi";
 
 	Context context;
-	// constructor
+
 	public UserFunctions(Context context)
 	{
 		this.context = context;
