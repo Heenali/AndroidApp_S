@@ -38,7 +38,6 @@ import com.trukker.trukkershipperuae.activity.Activity_IteamDelivery;
 import com.trukker.trukkershipperuae.activity.Activity_MoveMyGoods;
 import com.trukker.trukkershipperuae.activity.Activity_MoveMyHome;
 import com.trukker.trukkershipperuae.activity.Activity_paintingselection;
-import com.trukker.trukkershipperuae.activity.Dashbord_Delivery;
 import com.trukker.trukkershipperuae.activity.MainActivity;
 import com.trukker.trukkershipperuae.helper.ConnectionDetector;
 import com.trukker.trukkershipperuae.helper.Constants;
