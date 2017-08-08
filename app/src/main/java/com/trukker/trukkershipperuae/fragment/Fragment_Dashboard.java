@@ -328,7 +328,6 @@ public class Fragment_Dashboard extends Fragment
         pest=(CardView)rootView.findViewById(R.id.pest);
         moving_goods = (CardView) rootView.findViewById(R.id.loads);
 
-
         int notofication_id=0;
         prefs = getActivity().getSharedPreferences(prefName, getActivity().MODE_PRIVATE);
         notofication_id=prefs.getInt("id", notofication_id);

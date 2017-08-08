@@ -93,9 +93,6 @@ public class Fragment_Notification extends Fragment implements SwipeRefreshLayou
                                 }
         );
 
-
-
-
         return rootView;
     }
 
@@ -119,8 +116,7 @@ public class Fragment_Notification extends Fragment implements SwipeRefreshLayou
 
         notification_listview=(ListView)rootView.findViewById(R.id.listView_notification);
         swipeRefreshLayout = (SwipeRefreshLayout)rootView. findViewById(R.id.swipe_refresh_layout);
-        android_id = Settings.Secure.getString(getActivity().getContentResolver(),
-                Settings.Secure.ANDROID_ID);
+        android_id = Settings.Secure.getString(getActivity().getContentResolver(),Settings.Secure.ANDROID_ID);
     }
 
     @Override
