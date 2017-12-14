@@ -6,7 +6,6 @@ import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -25,9 +24,6 @@ import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -79,7 +75,8 @@ import java.util.TimeZone;
  * Created by admin on 8/31/2016.
  */
 
-public class Activity_MoveMyGoods_details extends AppCompatActivity
+public class Activity_MoveMyHiretruck_details extends AppCompatActivity
+
 {
     String page;
     TextView billing_title;
@@ -101,7 +98,6 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
     String messdata;
     TextView sharestatus_submit_nodrier;
     Thread t;
-    WebView web;
     String trackurl;
     String status="0";
     private Handler handler;
@@ -142,8 +138,8 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_movemygoods_details_new);
-        //  this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        setContentView(R.layout.activity_movemygoods_details);
+      //  this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         init();
         Constants.back=1;
         Constants.cancel_conformation="";
@@ -165,7 +161,7 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
         movingto_text.setText(destination_addr);
         distance_text.setText(TotalDistance+" KM");
         int d=00,d1=00;
-        //   Toast.makeText(getApplicationContext(),TotalTravelingRate.toString(),Toast.LENGTH_SHORT).show();
+     //   Toast.makeText(getApplicationContext(),TotalTravelingRate.toString(),Toast.LENGTH_SHORT).show();
         d=Integer.parseInt(TotalTravelingRate)/60;
         d1=Integer.parseInt(TotalTravelingRate)%60;
         eta_text.setText(String.valueOf(d)+" hr "+String.valueOf(d1)+" min");
@@ -191,7 +187,7 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
                     }
                     else
                     {
-                        // form_details.setVisibility(View.VISIBLE);
+                        form_details.setVisibility(View.VISIBLE);
                         Animation anm = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_up2);
                         form_details.startAnimation(anm);
                     }
@@ -211,7 +207,7 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
             else
             {
                 showdatils.setVisibility(View.GONE);
-                //form_details.setVisibility(View.VISIBLE);
+                form_details.setVisibility(View.VISIBLE);
                 sharestatus_submit_nodrier.setVisibility(View.GONE);
             }
 
@@ -227,25 +223,25 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
             UrlImageViewHelper.setUrlDrawable(driver_image_iv, UserFunctions.URLIMG.toString()+ driver_photo.toString(), R.drawable.ic_profile);
 
             //Toast.makeText(getApplicationContext(),UserFunctions.URLIMG.toString()+ driver_photo,Toast.LENGTH_SHORT).show();
-            // Picasso.with(getApplicationContext()).load(UserFunctions.URLIMG.toString()+ driver_photo).into(driver_image_iv);
+           // Picasso.with(getApplicationContext()).load(UserFunctions.URLIMG.toString()+ driver_photo).into(driver_image_iv);
         }
         cancleorder_submit_orange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                Intent i = new Intent(Activity_MoveMyGoods_details.this,Activity_MOveMyHome_Cancel.class);
+                Intent i = new Intent(Activity_MoveMyHiretruck_details.this,Activity_MOveMyHome_Cancel.class);
                 i.putExtra("shipper_id",shipper_id);
                 i.putExtra("load_inquiry_no",id);
-                // i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+               // i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(i);
-                Activity_MoveMyGoods_details.this.overridePendingTransition( R.anim.slide_enter, R.anim.slide_exit);
+                Activity_MoveMyHiretruck_details.this.overridePendingTransition( R.anim.slide_enter, R.anim.slide_exit);
             }
         });
         starestatus_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                final Dialog dialog = new Dialog(Activity_MoveMyGoods_details.this);
+                final Dialog dialog = new Dialog(Activity_MoveMyHiretruck_details.this);
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialog.setContentView(R.layout.share_status_dialog);
                 LinearLayout  sms_button=(LinearLayout)dialog.findViewById(R.id.sms_button);
@@ -285,7 +281,7 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                CustomDialogClass_reshedule timeclass = new  CustomDialogClass_reshedule(Activity_MoveMyGoods_details.this);
+                CustomDialogClass_reshedule timeclass = new  CustomDialogClass_reshedule(Activity_MoveMyHiretruck_details.this);
                 timeclass.show();
 
 
@@ -296,11 +292,10 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
     public void init()
     {
 
-        android_id = Settings.Secure.getString(getApplicationContext().getContentResolver(),
-                Settings.Secure.ANDROID_ID);
-        sm=new SessionManager(Activity_MoveMyGoods_details.this);
-        UF=new UserFunctions(Activity_MoveMyGoods_details.this);
-        cd= new ConnectionDetector(Activity_MoveMyGoods_details.this);
+        android_id = Settings.Secure.getString(getApplicationContext().getContentResolver(),Settings.Secure.ANDROID_ID);
+        sm=new SessionManager(Activity_MoveMyHiretruck_details.this);
+        UF=new UserFunctions(Activity_MoveMyHiretruck_details.this);
+        cd= new ConnectionDetector(Activity_MoveMyHiretruck_details.this);
 
 
 
@@ -327,8 +322,7 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
             }
 
             @Override
-            public View getInfoContents(Marker marker)
-            {
+            public View getInfoContents(Marker marker) {
 
                 title.setText(marker.getTitle());
 
@@ -363,6 +357,7 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
 
 
         googleMap.setMyLocationEnabled(false);
+
         googleMap.getUiSettings().setMyLocationButtonEnabled(false);
 
 
@@ -394,9 +389,8 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
         load_inquiry_shipping_date=i.getStringExtra("load_inquiry_shipping_date");
         load_inquiry_shipping_time=i.getStringExtra("load_inquiry_shipping_time");
         billing_title=(TextView)findViewById(R.id.billing_title);
-        page=i.getStringExtra("page");
+       page=i.getStringExtra("page");
 
-        web = (WebView) findViewById(R.id.webview);
         reshedule_btn=(TextView)findViewById(R.id.reshedule_btn);
         call_driver=(ImageView)findViewById(R.id.call_driver);
         destinationadd_text=(TextView)findViewById(R.id.destinationadd_text);
@@ -404,7 +398,7 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
         drivermno_text=(TextView)findViewById(R.id.drivermno_text);
         trucktype_text=(TextView)findViewById(R.id.trucktype_text);
         trucknumber_text=(TextView)findViewById(R.id.trucknumber_text);
-        movingfrom_text=(TextView)findViewById(R.id.movingfrom_text);
+         movingfrom_text=(TextView)findViewById(R.id.movingfrom_text);
         movingto_text=(TextView)findViewById(R.id.movingto_text);
         distance_text=(TextView)findViewById(R.id.distance_text);
         eta_text=(TextView)findViewById(R.id.eta_text);
@@ -420,12 +414,6 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
         back=(TextView)findViewById(R.id.back);
         sharestatus_submit_nodrier=(TextView)findViewById(R.id.sharestatus_submit_nodrier);
         sharestatus_submit_nodrier.setVisibility(View.GONE);
-
-        web.setWebViewClient(new myWebClient());
-        web.getSettings().setJavaScriptEnabled(true);
-        trackurl=trackurl.replace("https://","http://");
-        web.loadUrl(trackurl);
-
         try
         {
             if(page.equalsIgnoreCase("HireTruck"))
@@ -671,7 +659,7 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
 
 
                                         }
-                                        else if (status.equalsIgnoreCase("07")) {
+                                       else if (status.equalsIgnoreCase("07")) {
                                             Started_destination_Time = obj.getString("start_time").toString();
 
 
@@ -716,9 +704,9 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
                                 }
 
 
-                            }
+                        }
 
-                            drowmappath_second_hiretruck();
+                                drowmappath_second_hiretruck();
 
                             /////
                         }
@@ -891,7 +879,7 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
                             }
 
 
-                            drowmappath_second();
+                                drowmappath_second();
 
                             /////
                         }
@@ -972,14 +960,14 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
             @Override
             public void onMapLoaded()
             {
-                try
-                {
-                    googleMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, 30));
-                }
-                catch (Exception e)
-                {
+                    try
+                    {
+                        googleMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, 30));
+                    }
+                    catch (Exception e)
+                    {
 
-                }
+                    }
 
             }
         });
@@ -1019,7 +1007,7 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(lat_lng1,10));
 
     }
-    private String getDirectionsUrl(LatLng origin,LatLng dest){
+    private String getDirectionsUrl(LatLng origin, LatLng dest){
 
         String str_origin = "origin="+origin.latitude+ "," + origin.longitude;
         String str_dest = "destination="+dest.latitude+","+dest.longitude;
@@ -1229,7 +1217,7 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
         if(Constants.cancel_conformation=="Yes")
         {
             cancleorder_submit_orange.setVisibility(View.GONE);
-            cancleorder_submit.setVisibility(View.VISIBLE);
+             cancleorder_submit.setVisibility(View.VISIBLE);
 
         }
 
@@ -1250,7 +1238,7 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
             Log.i("Finished sending SMS...", "");
         }
         catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(Activity_MoveMyGoods_details.this,"SMS faild, please try again later.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Activity_MoveMyHiretruck_details.this,"SMS faild, please try again later.", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -1267,7 +1255,7 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
         try {
             startActivity(Intent.createChooser(i, "Send mail..."));
         } catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(Activity_MoveMyGoods_details.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Activity_MoveMyHiretruck_details.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -1362,7 +1350,7 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
             time_edittext = (EditText) findViewById(R.id.time_edittext);
             date_edittext = (EditText) findViewById(R.id.date_edittext);
             submit_btn = (TextView) findViewById(R.id.submit_btn);
-            close_btn= (TextView) findViewById(R.id.close_btn);
+           close_btn= (TextView) findViewById(R.id.close_btn);
 
             try
             {
@@ -1403,7 +1391,7 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
                     if (messdata.equalsIgnoreCase("")) {
                         time_edittext.setError("Enter valid reason");
                     } else {
-                        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(Activity_MoveMyGoods_details.this);
+                        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(Activity_MoveMyHiretruck_details.this);
                         builder.setMessage("Are you sure Cancel Order?");
                         // builder.setTitle("New Order");
                         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -1424,7 +1412,7 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
                     InputMethodManager im = (InputMethodManager) getApplicationContext().getSystemService(Context.INPUT_METHOD_SERVICE);
                     im.hideSoftInputFromWindow(date_edittext.getWindowToken(), 0);
 
-                    DatePickerDialog datePicker1 = new DatePickerDialog(Activity_MoveMyGoods_details.this, R.style.AppTheme_Dark_Dialog, datePicker, cal
+                    DatePickerDialog datePicker1 = new DatePickerDialog(Activity_MoveMyHiretruck_details.this, R.style.AppTheme_Dark_Dialog, datePicker, cal
                             .get(Calendar.YEAR), cal.get(Calendar.MONTH),
                             cal.get(Calendar.DAY_OF_MONTH));
 
@@ -1441,7 +1429,7 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
                     int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
                     int minute = mcurrentTime.get(Calendar.MINUTE);
                     TimePickerDialog mTimePicker;
-                    mTimePicker = new TimePickerDialog(Activity_MoveMyGoods_details.this, R.style.AppTheme_Dark_Dialog, new TimePickerDialog.OnTimeSetListener() {
+                    mTimePicker = new TimePickerDialog(Activity_MoveMyHiretruck_details.this, R.style.AppTheme_Dark_Dialog, new TimePickerDialog.OnTimeSetListener() {
                         @Override
                         public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
 
@@ -1509,10 +1497,10 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
             protected void onPreExecute() {
                 super.onPreExecute();
 
-                loading = new ProgressDialog(Activity_MoveMyGoods_details.this);
+                loading = new ProgressDialog(Activity_MoveMyHiretruck_details.this);
                 loading.getWindow().setBackgroundDrawable(new
 
-                        ColorDrawable(android.graphics.Color.TRANSPARENT));
+                        ColorDrawable(Color.TRANSPARENT));
                 loading.setIndeterminate(true);
                 loading.setCancelable(false);
                 loading.show();
@@ -1658,41 +1646,5 @@ public class Activity_MoveMyGoods_details extends AppCompatActivity
         Log.e("Local time...", localTime);
         String g=localTime.toString();
         return  g;
-    }
-    public class myWebClient extends WebViewClient
-    {
-        ProgressDialog loading;
-
-        @Override
-        public void onPageStarted(WebView view, String url, Bitmap favicon)
-        {
-            // TODO Auto-generated method stub
-            super.onPageStarted(view, url, favicon);
-            loading = new ProgressDialog(Activity_MoveMyGoods_details.this);
-            loading.getWindow().setBackgroundDrawable(new
-
-                    ColorDrawable(android.graphics.Color.TRANSPARENT));
-            loading.setIndeterminate(true);
-            loading.setCancelable(false);
-            loading.show();
-            loading.setContentView(R.layout.my_progress);
-        }
-
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            // TODO Auto-generated method stub
-
-            view.loadUrl(url);
-            return true;
-
-        }
-
-        @Override
-        public void onPageFinished(WebView view, String url) {
-            // TODO Auto-generated method stub
-            super.onPageFinished(view, url);
-
-            loading.dismiss();
-        }
     }
 }

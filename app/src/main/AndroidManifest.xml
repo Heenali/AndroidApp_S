@@ -127,6 +127,12 @@
             android:theme="@style/MyMaterialTheme" />
 
         <activity
+            android:name=".activity.Activity_MoveMyHiretruck_details"
+            android:largeHeap="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
             android:name=".activity.Activity_GetQuote_standard"
             android:screenOrientation="portrait"
             android:theme="@style/MyMaterialTheme" />

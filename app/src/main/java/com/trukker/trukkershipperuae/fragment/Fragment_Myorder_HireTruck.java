@@ -33,6 +33,7 @@ import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
 import com.squareup.picasso.Picasso;
 import com.trukker.trukkershipperuae.R;
 import com.trukker.trukkershipperuae.activity.Activity_MoveMyGoods_details;
+import com.trukker.trukkershipperuae.activity.Activity_MoveMyHiretruck_details;
 import com.trukker.trukkershipperuae.helper.ConnectionDetector;
 import com.trukker.trukkershipperuae.helper.Constants;
 import com.trukker.trukkershipperuae.helper.SessionManager;
@@ -123,7 +124,7 @@ public class Fragment_Myorder_HireTruck extends Fragment implements SwipeRefresh
                 String destination_addr = actorsList.get(position).getinquiry_destination_addr();
                 String sizeTypeDesc = actorsList.get(position).getSizeTypeDesc();
 
-                Intent i = new Intent(getActivity().getApplicationContext(), Activity_MoveMyGoods_details.class);
+                Intent i = new Intent(getActivity().getApplicationContext(), Activity_MoveMyHiretruck_details.class);
                 i.putExtra("id", postloadid);
                 i.putExtra("source_addr", source_addr);
                 i.putExtra("destination_addr", destination_addr);
