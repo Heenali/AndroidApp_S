@@ -18,11 +18,11 @@ public class UserFunctions
 	private JSONParser jsonParser;
 
 	//public static String URL = "http://110.227.255.47/trukkerUAE/Api/";  //  local only
-  public static String URL = "http://test.trukker.ae/trukkerUAEApitest/Api/";  //live only
+	 public static String URL = "https://test.trukker.ae/trukkerUAEApitest/Api/";  //live only
 	//public static String URL = "http://trukker.ae/trukkerUAEApi/Api/";  //live only
 
-//	public static String URLIMG=  "http://110.227.255.47/trukkerUAE";
-	public static String URLIMG=  "http://test.trukker.ae/trukkerUAEApitest";
+	//public static String URLIMG=  "http://110.227.255.47/trukkerUAE";
+	public static String URLIMG=  "https://test.trukker.ae/trukkerUAEApitest";
 	//public static String URLIMG=  "http://trukker.ae/trukkerUAEApi";
 
 	Context context;
@@ -41,7 +41,7 @@ public class UserFunctions
 		urls = URL + methodName;
 
 		Log.e("Urljson", urls);
-		String json = jsonParser.sendJSONPost(urls, jsonData);
+		String json = jsonParser.postRequesthtpps(urls, jsonData.toString());
 		//	Log.e("new res", "res"+json);
 		//String jsonFormattedString = json.replaceAll("\\\\", "");
 		if (json.length() != 0) {
@@ -54,14 +54,14 @@ public class UserFunctions
 	}
 
 	//for state
-	public String TruckMakeMst(String methodName)
+	public String getmethod(String methodName)
 	{
 		// Building Parameters
 		String urls = "";
 		urls = URL + methodName;
 
 	//	Log.e("truckmake Urljson", urls);
-		String json = jsonParser.sendGet(urls);
+		String json = jsonParser.getRequesthtpps(urls);
 		//String jsonFormattedString = json.replaceAll("\\\\", "");
 		json = json.trim();
 		if (json.length() > 0) {
@@ -152,7 +152,7 @@ public class UserFunctions
 			urls = URL + methodName;
 
 			Log.e("Urljson", urls);
-			json = jsonParser.sendJSONPost(urls, jsonData);
+			json = jsonParser.postRequesthtpps(urls, jsonData.toString());
 
 
 			if (json.length() > 0)
@@ -178,7 +178,7 @@ public class UserFunctions
 
 			urls = methodName;
 			Log.e(" Urljson", urls);
-			json = jsonParser.sendJSONPost(urls, jsonData);
+			json = jsonParser.postRequesthtpps(urls, jsonData.toString());
 
 			if (json.length() > 0)
 			{
@@ -209,7 +209,7 @@ public class UserFunctions
 		urls = URL + methodName;
 
 		Log.e("PostLoad Urljson", urls);
-		String json = jsonParser.sendJSONPost(urls, jsonData);
+		String json = jsonParser.postRequesthtpps(urls, jsonData.toString());
 		//String jsonFormattedString = json.replaceAll("\\\\", "");
         /* json= json.trim();
 		 json = json.substring(1, json.length()-1);

@@ -39,8 +39,12 @@ import com.trukker.trukkershipperuae.helper.ConnectionDetector;
 import com.trukker.trukkershipperuae.helper.Constants;
 import com.trukker.trukkershipperuae.helper.SessionManager;
 import com.trukker.trukkershipperuae.helper.UserFunctions;
+import com.trukker.trukkershipperuae.httpsrequest.HTTPUtils;
 import com.trukker.trukkershipperuae.model.Order_method;
 
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -48,9 +52,11 @@ import org.json.JSONTokener;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import java.net.URI;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
@@ -1554,28 +1560,32 @@ public class Activity_payment extends AppCompatActivity
         // Start Thread
         background.start();
     }
-    public String fetchResult(String urlString) throws JSONException {
-        StringBuilder builder;
-        BufferedReader reader;
-        URLConnection connection = null;
-        URL url = null;
-        String line;
-        builder = new StringBuilder();
-        reader = null;
+    public String fetchResult(String url) throws JSONException
+    {
+        String responseString = "";
+        HttpClient httpClient = HTTPUtils.getNewHttpClient(url.startsWith("https"));
+        HttpResponse response = null;
+        InputStream in;
+        URI newURI = URI.create(url);
+        HttpGet getMethod = new HttpGet(newURI);
         try {
-            url = new URL(urlString);
-            connection = url.openConnection();
-
-            reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-            while ((line = reader.readLine()) != null) {
-                builder.append(line);
-            }
-            //Log.d("DATA", builder.toString());
-        } catch (Exception e) {
-
+            response = httpClient.execute(getMethod);
+            in = response.getEntity().getContent();
+            responseString = convertStreamToString(in);
+        } catch (Exception e) {}
+        return responseString;
+    }
+    public static String convertStreamToString(InputStream is) throws Exception
+    {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+        StringBuilder sb = new StringBuilder();
+        String line = null;
+        while ((line = reader.readLine()) != null)
+        {
+            sb.append(line);
         }
-        //JSONArray arr=new JSONArray(builder.toString());
-        return builder.toString();
+        is.close();
+        return sb.toString();
     }
     public void SyncMethod(final String GetUrl)
     {

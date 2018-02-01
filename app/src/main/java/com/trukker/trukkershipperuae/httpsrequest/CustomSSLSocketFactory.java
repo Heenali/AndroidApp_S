@@ -1,4 +1,4 @@
-package trukkeruae.trukkertech.com.trukkeruae.httpsrequest;
+package com.trukker.trukkershipperuae.httpsrequest;
 
 import org.apache.http.conn.ssl.SSLSocketFactory;
 

@@ -35,13 +35,19 @@ import com.trukker.trukkershipperuae.helper.ConnectionDetector;
 import com.trukker.trukkershipperuae.helper.Constants;
 import com.trukker.trukkershipperuae.helper.SessionManager;
 import com.trukker.trukkershipperuae.helper.UserFunctions;
+import com.trukker.trukkershipperuae.httpsrequest.HTTPUtils;
 
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.URI;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.Arrays;
@@ -1147,30 +1153,32 @@ else if(Constants.selectedIntent_getquote.equalsIgnoreCase("SAVINGS"))
         }
 
     }
-    public String fetchResult(String urlString) throws JSONException
+    public String fetchResult(String url) throws JSONException
     {
-        StringBuilder builder;
-        BufferedReader reader;
-        URLConnection connection=null;
-        URL url=null;
-        String line;
-        builder=new StringBuilder();
-        reader=null;
+        String responseString = "";
+        HttpClient httpClient = HTTPUtils.getNewHttpClient(url.startsWith("https"));
+        HttpResponse response = null;
+        InputStream in;
+        URI newURI = URI.create(url);
+        HttpGet getMethod = new HttpGet(newURI);
         try {
-            url=new URL(urlString);
-            connection=url.openConnection();
-
-            reader=new BufferedReader(new InputStreamReader(connection.getInputStream()));
-            while((line=reader.readLine())!=null)
-            {
-                builder.append(line);
-            }
-            //Log.d("DATA", builder.toString());
-        } catch (Exception e) {
-
+            response = httpClient.execute(getMethod);
+            in = response.getEntity().getContent();
+            responseString = convertStreamToString(in);
+        } catch (Exception e) {}
+        return responseString;
+    }
+    public static String convertStreamToString(InputStream is) throws Exception
+    {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+        StringBuilder sb = new StringBuilder();
+        String line = null;
+        while ((line = reader.readLine()) != null)
+        {
+            sb.append(line);
         }
-        //JSONArray arr=new JSONArray(builder.toString());
-        return builder.toString();
+        is.close();
+        return sb.toString();
     }
     @Override
     public void onResume()
