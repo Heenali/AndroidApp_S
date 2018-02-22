@@ -18,12 +18,24 @@ public class UserFunctions
 	private JSONParser jsonParser;
 
 	//public static String URL = "http://110.227.255.47/trukkerUAE/Api/";  //  local only
-	 public static String URL = "https://test.trukker.ae/trukkerUAEApitest/Api/";  //live only
-	//public static String URL = "http://trukker.ae/trukkerUAEApi/Api/";  //live only
+	 //public static String URL = "https://test.trukker.ae/trukkerUAEApitest/Api/";  //live only
+	public static String URL = "http://trukker.ae/trukkerUAEApi/Api/";  //live only
 
 	//public static String URLIMG=  "http://110.227.255.47/trukkerUAE";
-	public static String URLIMG=  "https://test.trukker.ae/trukkerUAEApitest";
-	//public static String URLIMG=  "http://trukker.ae/trukkerUAEApi";
+	//public static String URLIMG=  "https://test.trukker.ae/trukkerUAEApitest";
+	public static String URLIMG=  "http://trukker.ae/trukkerUAEApi";
+
+
+	public static String home_web="http://trukker.ae/dashboard/postload_trukker_home.html";
+	public static String day_web="http://trukker.ae/dashboard/postload_rent_a_truck_by_day.html";
+	public static String trip_web="http://trukker.ae/dashboard/postload_rent_a_truck_by_trip.html";
+
+
+	//public static String home_web="http://test.trukker.ae/dashboard/postload_trukker_home.html";
+//	public static String day_web="http://test.trukker.ae/dashboard/postload_rent_a_truck_by_day.html";
+	//public static String trip_web="http://test.trukker.ae/dashboard/postload_rent_a_truck_by_trip.html";
+
+
 
 	Context context;
 

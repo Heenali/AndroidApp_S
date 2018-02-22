@@ -30,6 +30,9 @@ import android.widget.Toast;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.trukker.trukkershipperuae.R;
+import com.trukker.trukkershipperuae.Webview.Hiretruck_Webview;
+import com.trukker.trukkershipperuae.Webview.Movinggoods_Webview;
+import com.trukker.trukkershipperuae.Webview.Movinghome_Webview;
 import com.trukker.trukkershipperuae.activity.Activity_GetQuote;
 import com.trukker.trukkershipperuae.activity.Activity_GoodsQuote;
 import com.trukker.trukkershipperuae.activity.Activity_HireQuote;
@@ -181,7 +184,7 @@ public class Fragment_Dashboard extends Fragment
             {
 
                 Constants.Draft="N";
-                Intent i = new Intent(getActivity().getApplicationContext(), Activity_MoveMyGoods.class);
+                Intent i = new Intent(getActivity().getApplicationContext(), Movinggoods_Webview.class);
                 startActivity(i);
                 getActivity().overridePendingTransition(R.anim.right_in, R.anim.left_out);
                 getActivity().finish();
@@ -195,7 +198,7 @@ public class Fragment_Dashboard extends Fragment
             {
 
                 Constants.Draft="N";
-                Intent i = new Intent(getActivity().getApplicationContext(), Activity_HireTruck.class);
+                Intent i = new Intent(getActivity().getApplicationContext(), Hiretruck_Webview.class);
                 startActivity(i);
                 getActivity().overridePendingTransition(R.anim.right_in, R.anim.left_out);
                 getActivity().finish();
@@ -225,7 +228,7 @@ public class Fragment_Dashboard extends Fragment
             {
 
                 Constants.Draft="N";
-                Intent i = new Intent(getActivity().getApplicationContext(), Activity_HireTruck.class);
+                Intent i = new Intent(getActivity().getApplicationContext(), Hiretruck_Webview.class);
                 startActivity(i);
                 getActivity().overridePendingTransition(R.anim.right_in, R.anim.left_out);
                 getActivity().finish();
@@ -240,7 +243,7 @@ public class Fragment_Dashboard extends Fragment
             {
 
                 Constants.Draft="N";
-                Intent i = new Intent(getActivity().getApplicationContext(), Activity_MoveMyHome.class);
+                Intent i = new Intent(getActivity().getApplicationContext(), Movinghome_Webview.class);
                 startActivity(i);
                 getActivity().overridePendingTransition(R.anim.right_in, R.anim.left_out);
                 getActivity().finish();

@@ -45,10 +45,10 @@ public class Activity_IteamDelivery extends Activity {
     /** Called when the activity is first created. */
 
     WebView web;
-    ProgressDialog  loading;
     UserFunctions UF;
     SessionManager sm;
     ConnectionDetector cd;
+    ProgressDialog loading;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -61,6 +61,14 @@ public class Activity_IteamDelivery extends Activity {
         web = (WebView) findViewById(R.id.webView1);
         try
         {
+            loading = new ProgressDialog(Activity_IteamDelivery.this);
+            loading.getWindow().setBackgroundDrawable(new
+
+                    ColorDrawable(android.graphics.Color.TRANSPARENT));
+            loading.setIndeterminate(true);
+            loading.setCancelable(false);
+            loading.show();
+            loading.setContentView(R.layout.my_progress);
                 String url = UserFunctions.URL + "postorder/GetParameterDetails?paramvalue=DELLINK";
                 SyncMethod(url);
 
@@ -168,7 +176,7 @@ public class Activity_IteamDelivery extends Activity {
 
                         Log.e("mess", "screen>>" + array.getJSONObject(0).getString("Value").toString());
 
-
+                        loading.dismiss();
                         web.setWebViewClient(new myWebClient());
                         web.getSettings().setJavaScriptEnabled(true);
                         web.loadUrl(array.getJSONObject(0).getString("Value").toString());

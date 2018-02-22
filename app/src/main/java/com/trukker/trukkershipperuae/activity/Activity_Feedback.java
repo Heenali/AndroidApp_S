@@ -90,9 +90,8 @@ public class Activity_Feedback extends AppCompatActivity
         back.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View v) {
-
-
+            public void onClick(View v)
+            {
                 finish();
 
             }
@@ -103,7 +102,6 @@ public class Activity_Feedback extends AppCompatActivity
         }
         else
         {
-
             submit_btn.setVisibility(View.GONE);
             comment_txt.setFocusable(false);
             rating.setFocusable(false);
@@ -153,8 +151,6 @@ public class Activity_Feedback extends AppCompatActivity
             public void onClick(View v) {
                 if (cd.isConnectingToInternet())
                 {
-
-
                     if(comment_txt.getText().toString().equalsIgnoreCase(""))
                     {
                         comment_txt.setError("Enter valid Comment");
@@ -169,16 +165,20 @@ public class Activity_Feedback extends AppCompatActivity
                         builder.setMessage("Are you sure want Give Feedback?");
                         // builder.setTitle("New Order");
 
-                        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
+                        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener()
+                        {
+                            public void onClick(DialogInterface dialog, int which)
+                            {
                                 new GetJson_save().execute();
 
                             }
                         });
 
                         builder.setNegativeButton("Cancel",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int which) {
+                                new DialogInterface.OnClickListener()
+                                {
+                                    public void onClick(DialogInterface dialog, int which)
+                                    {
                                         dialog.cancel();
                                     }
                                 });
@@ -193,8 +193,6 @@ public class Activity_Feedback extends AppCompatActivity
 
         });
         drowmappath();
-
-
     }
     public void init()
     {
@@ -247,7 +245,6 @@ public class Activity_Feedback extends AppCompatActivity
 
                 jsonArray.put(prmsLogin);
                 prms.put("feedback", prmsLogin);
-
                 Log.e("--------------------", "----------------------------------");
                 Log.e("Homefeedback Post--", prms.toString());
 
@@ -275,8 +272,11 @@ public class Activity_Feedback extends AppCompatActivity
             } else {
                 if (json_save.equalsIgnoreCase("0")) {
                     UF.msg("Invalid");
-                } else {
-                    try {
+                }
+                else
+                    {
+                    try
+                    {
                         JSONObject jobj = new JSONObject(json_save);
 
                         Log.e("Homefeedback Get--", json_save.toString());
@@ -287,7 +287,7 @@ public class Activity_Feedback extends AppCompatActivity
                         {
 
 
-                             UF.msg(message + "");
+                            UF.msg(message + "");
 
                             Intent i = new Intent(Activity_Feedback.this,MainActivity.class);
                             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -335,6 +335,7 @@ public class Activity_Feedback extends AppCompatActivity
                 googleMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, 30));
             }
         });
+
       /*  if (cd.isConnectingToInternet())
         {
             String url = getDirectionsUrl(lat_lng1, lat_lng2);
@@ -349,7 +350,8 @@ public class Activity_Feedback extends AppCompatActivity
 
 
     }
-    public class LinearLayoutManagerWithSmoothScroller extends LinearLayoutManager {
+    public class LinearLayoutManagerWithSmoothScroller extends LinearLayoutManager
+    {
 
         public LinearLayoutManagerWithSmoothScroller(Context context) {
             super(context, VERTICAL, false);
@@ -373,14 +375,12 @@ public class Activity_Feedback extends AppCompatActivity
             public TopSnappedSmoothScroller(Context context)
             {
                 super(context);
-
             }
 
             @Override
             public PointF computeScrollVectorForPosition(int targetPosition)
             {
-                return LinearLayoutManagerWithSmoothScroller.this
-                        .computeScrollVectorForPosition(targetPosition);
+                return LinearLayoutManagerWithSmoothScroller.this .computeScrollVectorForPosition(targetPosition);
             }
 
             @Override

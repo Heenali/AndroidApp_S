@@ -23,7 +23,6 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/appicon"
-
         android:label="@string/app_name"
         android:theme="@style/Theme.MyAppTheme" >
         <activity
@@ -185,6 +184,22 @@
             android:name=".activity.Activity_IteamDelivery"
             android:screenOrientation="portrait"
             android:theme="@style/MyMaterialTheme" />
+
+        <activity
+        android:name=".Webview.Hiretruck_Webview"
+        android:screenOrientation="portrait"
+        android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name=".Webview.Movinggoods_Webview"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name=".Webview.Movinghome_Webview"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+
 
         <activity
             android:name=".activity.Dialog_postlodedetail"/>

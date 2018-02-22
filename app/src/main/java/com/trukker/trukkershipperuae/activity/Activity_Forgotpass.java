@@ -181,7 +181,6 @@ public class Activity_Forgotpass extends AppCompatActivity
 
             }
 
-
             init();
             UF = new UserFunctions(getActivity().getApplication());
             sm = new SessionManager(getActivity().getApplication());
@@ -365,9 +364,12 @@ public class Activity_Forgotpass extends AppCompatActivity
 
             } else {
                 if (cd.isConnectingToInternet()) {
-                    if (confirmPw.equalsIgnoreCase(passWord)) {
+                    if (confirmPw.equalsIgnoreCase(passWord))
+                    {
                         new PwUpdate().execute();
-                    } else {
+                    }
+                    else
+                    {
                         Toast.makeText((getActivity().getApplication()), "Password Not Match", Toast.LENGTH_SHORT).show();
                     }
 
